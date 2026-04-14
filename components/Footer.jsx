@@ -22,7 +22,7 @@ export default function Footer() {
             <span className={styles.eyebrow}>Get in touch</span>
             <h2 className={styles.title}>Let's work together</h2>
             <p className={styles.sub}>
-              Whether you have a role in mind, want to collaborate on open source,
+              Whether you have a role in mind, have any business inquiries,
               or just want to say hi — I'd love to hear from you. I typically respond within 24 hours.
             </p>
             <div className={styles.contactLinks}>
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className={styles.formWrap}>
+{/*           <div className={styles.formWrap}>
             {sent ? (
               <div className={styles.success}>
                 <span className={styles.successIcon}>✓</span>
@@ -74,7 +74,7 @@ export default function Footer() {
                 </button>
               </form>
             )}
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.bottom}>
