@@ -13,8 +13,10 @@ export const person = {
   available:      true,
   availableLabel: 'Available now',
   availableNote:  'Open to Technical Consultant, Implementation Consultant or similar roles · Remote-first preferred',
-  tagline:        'I build the systems that let teams move fast without breaking things.',
-  about:          `I'm a Technical Consultant with 4+ years across startups and scale-ups, specialising in distributed systems, developer tooling, and the space between backend infrastructure and frontend product. I care deeply about the craft — readable code, honest trade-offs, and teams where trust is the default. Outside of work I contribute to open source, write occasionally about systems design, and am slowly learning to make great espresso.`,
+  tagline:        `I'm the one who asks the awkward question in the kickoff that saves everyone two weeks.`,
+  about:          `I started as a web developer at Siemens, building internal tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
+
+At Textkernel, and now Bullhorn, I've spent four years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
   heroQuote: {
     text:       'Hugo is a sharp and energetic consultant who brings structure and clarity to every task and project. He is the one to ask the right questions early, and makes sure expectations of stakeholders are aligned. [...] Beyond his technical skills, he is reliable and a great team-player.',
     author:     'Tonio Kellner',
