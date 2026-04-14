@@ -35,12 +35,12 @@ export default function Hero() {
         </blockquote>
 
         <div className={styles.ctas}>
-          <a href="#projects" className={styles.btnPrimary}>
+{/*           <a href="#projects" className={styles.btnPrimary}>
             View my work
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </a>
+          </a> */}
           <a href={person.cvUrl} download className={styles.btnSecondary}>
             Download CV
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
