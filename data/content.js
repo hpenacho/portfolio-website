@@ -223,7 +223,7 @@ export const recommendations = [
     role: 'Senior Global Project Manager, Textkernel',
     initials: 'HY',
     color: 'gold',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
     shortText: "He has this rare ability to stay calm, ask the right questions, and quickly understand what people actually need — even when they struggle to explain it themselves. [...] Hugo is the kind of colleague who makes work easier, teams stronger, and results better.",
@@ -231,7 +231,7 @@ export const recommendations = [
     role: 'Customer Success and AI Specialist, Bullhorn',
     initials: 'SS',
     color: 'coral',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
     shortText: "Having gone through that 'trial by fire' together, I can say with certainty that Hugo is as resilient as he is sharp. He has a remarkable ability to process and organize massive amounts of complex information with a meticulous eye for detail. [...] he doesn't just solve their tickets; he cares about their outcomes.",
@@ -239,7 +239,7 @@ export const recommendations = [
     role: 'Senior Technical Consultant, Textkernel',
     initials: 'AE',
     color: 'sage',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
     shortText: "Hugo consistently demonstrated great technical expertise, ensuring that every customer project was executed on time. [...] He has an impressive ability to convey complex technical concepts in a clear and understandable manner, making collaboration seamless and productive",
@@ -247,7 +247,7 @@ export const recommendations = [
     role: 'Technical Consultant, Professional Services',
     initials: 'AM',
     color: 'blue',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
     shortText: "Hugo is one of those people who really walks the talk - he excels in both his technical knowledge and execution. [...] He is meticulous, thoughtful when crafting solutions, and has a gift for explaining complex topics at all levels of understanding.",
@@ -255,7 +255,7 @@ export const recommendations = [
     role: 'Technical Consultant, Textkernel',
     initials: 'ES',
     color: 'coral',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
     shortText: "When he commits to something, you can trust that he will follow through with dedication. Beyond his professional expertise, his warm personality and positive energy make him a really nice colleague. [...] Any team needs a Hugo!",
@@ -263,6 +263,6 @@ export const recommendations = [
     role: 'Support Engineer, Textkernel',
     initials: 'LV',
     color: 'sage',
-    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/details/recommendations',
+    linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
 ];

@@ -62,7 +62,7 @@ export default function Recommendations() {
 
         <div className={styles.showMore}>
           <a
-            href="https://www.linkedin.com/in/hugopenacho/details/recommendations/"
+            href="https://www.linkedin.com/in/hugopenacho/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.showMoreBtn}
