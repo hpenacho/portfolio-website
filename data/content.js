@@ -48,7 +48,7 @@ export const experience = [
  Continued to provision, configure, troubleshoot and deliver most Textkernel products as pre-acquisition, plus:
 • Delivered new Bullhorn products, optimizing candidate matching & talent workflows on unified platform.
 
-𝗛𝗶𝗴𝗵𝗹𝗶𝗴𝗵𝘁𝘀
+𝐇𝐢𝐠𝐡𝐥𝐢𝐠𝐡𝐭𝐬
 • Successfully delivered AI-powered recruitment solutions for a portfolio of over 100 enterprise clients (incl. 8 Fortune 500, 16 Global 2000).
 • Implemented and delivered tailored AI recruitment solutions for 5 government agencies, addressing unique public sector needs.
 • Considerably reduced delivery time by up to 30% for key Textkernel products through improvements in provisioning processes (Jenkins) and cross-department process streamlining.
@@ -56,7 +56,7 @@ export const experience = [
 • Successfully finalized over 500 JIRA issues across internal operational enhancements and key customer requests.
 • Completed over 300 customer product deliveries and functionality rollouts, tracked in Salesforce.
 
-𝗖𝗼𝗿𝗲 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗶𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀
+𝐂𝐨𝐫𝐞 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐛𝐢𝐥𝐢𝐭𝐢𝐞𝐬
 • Created parameterized Jenkins jobs for automated, customer-tailored Textkernel product deployments.
 • Analyzed external customer systems and determined optimal service connections.
 • Created technical designs, extensive documentation and oversaw project implementation.
