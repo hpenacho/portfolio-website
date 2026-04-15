@@ -12,7 +12,7 @@ export const person = {
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Technical Consultant, Implementation Consultant, Forward Deployed Engineer, Support Engineer roles or similar · Remote-first preferred',
+  availableNote:  'Open to Technical Consultant, Implementation Consultant, Support Engineer roles or similar · Remote-first preferred',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
