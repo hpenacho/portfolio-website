@@ -14,7 +14,7 @@ export const person = {
   availableLabel: 'Available now',
   availableNote:  'Technical Consultant, Implementation Consultant, Forward Deployed Engineer, Support Engineer roles or similar · Remote-first preferred',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
-  about:          `I started as a web developer at Siemens, building internal tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
+  about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
 At Textkernel, and now Bullhorn, I've spent four years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
   heroQuote: {
@@ -80,6 +80,7 @@ export const experience = [
     company: 'Siemens',
     location:'Remote · Lisbon, Portugal',
     desc: `• Developed web applications for internal clients.
+• Improved maintainability of internal web apps by refactoring legacy code and resolving persistent bugs, reducing friction for future development
 • Provided corrective maintenance on company applications to ensure smooth operations.
 • Communicated directly with clients to gather feedback and helped to devise solutions that met their unique needs.
 • Continuously developed strong problem-solving abilities and collaborated effectively with team members to ensure timely delivery of high-quality work.`,
