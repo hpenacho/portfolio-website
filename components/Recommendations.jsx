@@ -51,7 +51,7 @@ export default function Recommendations() {
         <span className="eyebrow">Social proof</span>
         <h2 className="section-title">What colleagues say</h2>
         <p className="section-sub">
-          Recommendations from LinkedIn — from people I&apos;ve worked with.
+          Recommendations from LinkedIn — from people I&apos;ve been lucky to work with.
         </p>
 
         <div className={styles.grid}>

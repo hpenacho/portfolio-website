@@ -9,7 +9,8 @@ export default function HowIWork() {
       <div className="container">
         <span className="eyebrow">Working style</span>
         <h2 className="section-title">My Approach</h2>
-        <p className="section-sub">The principles I bring to every project—these are the core philosophies that guide how I solve problems, communicate ideas, and ensure the long-term success of the products I touch.</p>
+        <p className="section-sub">What to expect when working with me and how I solve project headaches</p>
+    {/* <p className="section-sub">The principles I bring to every project—these are the core philosophies that guide how I solve problems, communicate ideas, and ensure the long-term success of the products I touch.</p>*/}
         <div className={styles.grid} ref={ref}>
           {howIWork.map((item, i) => (
             <div

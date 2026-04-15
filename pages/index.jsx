@@ -37,7 +37,8 @@ export default function Home() {
           id="education"
           eyebrow="Background"
           title="Academic History"
-          subtitle="Where the foundations were built."
+          subtitle="                                 "
+       /* subtitle="Where the foundations were built." */
           items={education}
           surface={false}
         />

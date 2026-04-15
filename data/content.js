@@ -12,8 +12,8 @@ export const person = {
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Open to Technical Consultant, Implementation Consultant or similar roles · Remote-first preferred',
-  tagline:        `I'm the one who asks the awkward question in the kickoff that saves everyone two weeks.`,
+  availableNote:  'Technical Consultant, Implementation Consultant, Forward Deployed Engineer, Support Engineer roles or similar · Remote-first preferred',
+  tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about:          `I started as a web developer at Siemens, building internal tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
 At Textkernel, and now Bullhorn, I've spent four years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
@@ -40,23 +40,15 @@ export const currently = [
 
 export const experience = [
   {
-    period:  'Jun 2024 — Present',
+    period:  'Jun 2024 — Jan 2026',
     role:    'Senior Technical Consultant',
     company: 'Bullhorn',
     location:'Remote · Amsterdam, Netherlands',
     desc:    `𝐏𝐨𝐬𝐭-𝐉𝐮𝐧 𝟐𝟎𝟐𝟒 𝐚𝐜𝐪𝐮𝐢𝐬𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝐓𝐞𝐱𝐭𝐤𝐞𝐫𝐧𝐞𝐥 𝐛𝐲 𝐁𝐮𝐥𝐥𝐡𝐨𝐫𝐧
-• Continued to provision, configure, troubleshoot and deliver most Textkernel products as pre-acquisition, plus:
+ Continued to provision, configure, troubleshoot and deliver most Textkernel products as pre-acquisition, plus:
 • Delivered new Bullhorn products, optimizing candidate matching & talent workflows on unified platform.
-• Delivered HR solutions (parsing, semantic search, SaaS deployments & API integrations) for staffing/recruitment clients.
-• Collaborated cross-functionally on AI strategy, enabling multilingual skills extraction for global teams.`,
-    tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
-  },
-  {
-    period:  'Jun 2022 — Jan 2026',
-    role:    'Technical Consultant',
-    company: 'Textkernel',
-    location:'Remote · Amsterdam, Netherlands',
-    desc: `𝗛𝗶𝗴𝗵𝗹𝗶𝗴𝗵𝘁𝘀
+
+𝗛𝗶𝗴𝗵𝗹𝗶𝗴𝗵𝘁𝘀
 • Successfully delivered AI-powered recruitment solutions for a portfolio of over 100 enterprise clients (incl. 8 Fortune 500, 16 Global 2000).
 • Implemented and delivered tailored AI recruitment solutions for 5 government agencies, addressing unique public sector needs.
 • Considerably reduced delivery time by up to 30% for key Textkernel products through improvements in provisioning processes (Jenkins) and cross-department process streamlining.
@@ -70,7 +62,16 @@ export const experience = [
 • Created technical designs, extensive documentation and oversaw project implementation.
 • Managed communication and collaboration with customers and internal resources, ensuring successful project delivery.
 • Troubleshot issues ranging from configuration errors to product issues on both ends.
-• Worked collaboratively with cross-functional teams to continuously improve products and processes.`,
+• Worked collaboratively with cross-functional teams to continuously improve products and processes.
+`,
+    tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
+  },
+  {
+    period:  'Jun 2022 — Jan 2026',
+    role:    'Technical Consultant',
+    company: 'Textkernel',
+    location:'Remote · Amsterdam, Netherlands',
+    desc: `Company acquisition by Bullhorn, see above for full role details which remained largely unchanged.`,
     tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
   },
   {
