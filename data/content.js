@@ -43,6 +43,8 @@ export const experience = [
     period:  'Jun 2024 — Jan 2026',
     role:    'Senior Technical Consultant',
     company: 'Bullhorn',
+    logo:    '/logos/bullhorn_lightmode.svg',
+    logoDark: '/logos/bullhorn_darkmode.svg',
     location:'Remote · Amsterdam, Netherlands',
     desc:    `𝐏𝐨𝐬𝐭-𝐉𝐮𝐧 𝟐𝟎𝟐𝟒 𝐚𝐜𝐪𝐮𝐢𝐬𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝐓𝐞𝐱𝐭𝐤𝐞𝐫𝐧𝐞𝐥 𝐛𝐲 𝐁𝐮𝐥𝐥𝐡𝐨𝐫𝐧
  Continued to provision, configure, troubleshoot and deliver most Textkernel products as pre-acquisition, plus:
@@ -70,6 +72,8 @@ export const experience = [
     period:  'Jun 2022 — Jan 2026',
     role:    'Technical Consultant',
     company: 'Textkernel',
+    logo:    '/logos/Textkernel.png',
+    logoInvert: true,
     location:'Remote · Amsterdam, Netherlands',
     desc: `Company acquisition by Bullhorn, see above for full role details which remained largely unchanged.`,
     tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
@@ -78,6 +82,7 @@ export const experience = [
     period:  'Feb 2021 — May 2022',
     role:    'Web Developer',
     company: 'Siemens',
+    logo:    '/logos/Siemens.svg',
     location:'Remote · Lisbon, Portugal',
     desc: `• Developed web applications for internal clients.
 • Improved maintainability of internal web apps by refactoring legacy code and resolving persistent bugs, reducing friction for future development
@@ -90,6 +95,7 @@ export const experience = [
     period:  'Nov 2020 - Jan 2021',
     role:    'Web Developer - Internship',
     company: 'Siemens',
+    logo:    '/logos/Siemens.svg',
     location:'Remote · Lisbon, Portugal',
     desc: `• Successfully completed a 400-hour curricular internship over 3 months, which led to being hired for a full-time position.
 • Demonstrated proficiency in Angular, .NET Core, and Microsoft SQL Server.
@@ -104,6 +110,8 @@ export const education = [
     period:  'Jan 2021 - Dec 2021',
     role:    'Computer Programming',
     company: 'University of Helsinki',
+    logo:    '/logos/universityhelsinki.png',
+    logoInvert: true,
     location:'Remote · Finland',
     desc:    'M.E.R.N. Stack Course supported and accredited by the University of Helsinki.',
     tags:    ['React', 'Node.js', 'Express', 'MongoDB','Redux'],
@@ -112,6 +120,8 @@ export const education = [
     period:  'Sep 2019 - Jan 2021',
     role:    'IT Technologies and Programming Specialist, Computer Programming',
     company: 'ATEC - Training Academy',
+    logo:    '/logos/atec.png',
+    logoInvert: true,
     location:'Portugal',
     desc:    'Completed a 1300-hour theory course + 400-hour internship, building academic projects while gaining hands-on experience in Java, C#, Microsoft SQL Server, networking, OOP, project management and more.',
     tags:    ['Object Oriented Programming', 'Algorithms', 'Java', 'C#','Microsoft SQL Server', 'Javascript', 'Git', 'HTML5', 'CSS3', 'Bootstrap', 'ASP.NET', 'WinForms / WebForms', 'Agile Scrum', 'UML', 'Computer Networking', 'Linux'],
@@ -124,7 +134,7 @@ export const skills = [
   { category: 'Backend & APIs',  items: ['Node.js', 'REST', 'SOAP'] },
   { category: 'Data & Streaming',items: ['Microsoft SQL Server', 'MongoDB', 'Elasticsearch'] },
   { category: 'Infrastructure',  items: ['AWS', 'Docker', 'Kubernetes', 'GitHub Actions'] },
-  { category: 'Practices',       items: ['Technical Consultancy','Design Documents', 'Problem Solving', 'Professional Services', 'Software Implementation', 'Active Listening'] },
+  { category: 'Practices',       items: ['Design Documents', 'Software Implementation'] },
 ];
 
 export const projects = [

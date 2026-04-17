@@ -50,6 +50,50 @@
   box-shadow: var(--shadow-card);
 }
 
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 125px;
+  object-fit: contain;
+  opacity: 0.75;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.logoLight {
+  display: block;
+}
+
+.logoDark {
+  display: none;
+}
+
+[data-theme="dark"] .logoInvert {
+  filter: invert(1) brightness(1.8);
+}
+
+[data-theme="dark"] .logoLight { display: none; }
+[data-theme="dark"] .logoDark  { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .logoLight { display: none; }
+  :root:not([data-theme]) .logoDark  { display: block; }
+  :root:not([data-theme]) .logoInvert { filter: invert(1) brightness(1.8); }
+}
+
 .period {
   font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -61,7 +105,7 @@
   color: var(--text-1); margin-bottom: 0.22rem;
   letter-spacing: -0.01em;
 }
-.company { font-size: 0.86rem; color: var(--text-2); margin-bottom: 0.75rem; }
+.company { font-size: 0.86rem; color: var(--text-2); margin-bottom: 0; }
 .loc { color: var(--text-3); }
 .desc { font-size: 0.89rem; color: var(--text-2); line-height: 1.7; font-weight: 300; margin-bottom: 1rem;  white-space: pre-line; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
@@ -70,4 +114,6 @@
   .timeline { padding-left: 1.75rem; }
   .dot { left: calc(-1.75rem + 1.5px); }
   .card { padding: 1.1rem 1.2rem; }
+  .logo, .logoLight, .logoDark { height: 26px; max-width: 80px; }
 }
+
