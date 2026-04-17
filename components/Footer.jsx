@@ -79,6 +79,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p className={styles.copy}>© {new Date().getFullYear()} {person.name} · Built with Next.js</p>
+          <p className={styles.copy}>This site uses cookieless, privacy-friendly analytics. No personal data is collected.</p>
           <a href="#hero" className={styles.topLink}>Back to top ↑</a>
         </div>
       </div>
