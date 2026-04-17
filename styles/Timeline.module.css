@@ -114,6 +114,6 @@
   .timeline { padding-left: 1.75rem; }
   .dot { left: calc(-1.75rem + 1.5px); }
   .card { padding: 1.1rem 1.2rem; }
-  .logo, .logoLight, .logoDark { height: 26px; max-width: 80px; }
+  .logo, .logoLight, .logoDark { height: 40px; max-width: 110px; }
 }
 
