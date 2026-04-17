@@ -113,6 +113,7 @@
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: var(--text-1);
   font-weight: 300;
+  text-wrap: balance;
   max-width: 520px;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -231,7 +232,13 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 100px 0 60px; }
+  .hero {
+    padding: 82px 0 42px;
+    min-height: auto;
+    align-items: flex-start;
+  }  
+  .btnIcon {width: 45px;height: 45px;}
+  .btnIcon svg {width: 24px;height: 24px;}
   .availNote { display: none; }
   .pullQuote { display: none; }
   .scrollHint { display: none; }
