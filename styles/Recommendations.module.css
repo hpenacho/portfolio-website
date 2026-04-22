@@ -21,13 +21,13 @@
 .card:hover { border-color: var(--border-hi); box-shadow: var(--shadow-lift); }
 .qMark {
   position: absolute; top: 1.4rem; right: 1.6rem;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: 3rem; font-style: italic;
   color: var(--text-3); opacity: 0.2; line-height: 1;
   pointer-events: none;
 }
 .text {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: 0.94rem; color: var(--text-2);
   line-height: 1.72; padding-right: 2rem;
   flex: 1;

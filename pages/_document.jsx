@@ -1,15 +1,19 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import { person } from '../data/content';
 
+// Standardized description for SEO and Socials
+const seoDescription = "Senior Technical Consultant. 300+ SaaS rollouts & API integrations for 100+ enterprise clients. Based in Portugal, open to remote global work or relocation.";
+
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: person.name,
   jobTitle: person.role,
   url: 'https://hugopenacho.com',
+  image: 'https://hugopenacho.com/og-image.png', // Added image for Google rich snippets
   email: person.email,
   sameAs: [person.github, person.linkedin],
-  description: person.tagline,
+  description: seoDescription,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Lisbon',
@@ -21,7 +25,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Prevent flash of wrong theme before React loads */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
             var saved = localStorage.getItem('theme');
@@ -31,8 +34,7 @@ export default function Document() {
         `}} />
 
         {/* Primary SEO */}
-        <meta name="description" content={`${person.name} — ${person.role}. ${person.tagline}`} />
-        <meta name="keywords" content="Technical Consultant, Web Developer, Textkernel, Bullhorn, Software Implementation, Python, XML, Jenkins, React, Node.js, Remote" />
+        <meta name="description" content={seoDescription} />
         <meta name="author" content={person.name} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://hugopenacho.com" />
@@ -41,7 +43,7 @@ export default function Document() {
         <meta property="og:type"        content="website" />
         <meta property="og:url"         content="https://hugopenacho.com" />
         <meta property="og:title"       content={`${person.name} — ${person.role}`} />
-        <meta property="og:description" content={person.tagline} />
+        <meta property="og:description" content={seoDescription}/>
         <meta property="og:image"       content="https://hugopenacho.com/og-image.png" />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
@@ -51,7 +53,7 @@ export default function Document() {
         {/* Twitter card */}
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content={`${person.name} — ${person.role}`} />
-        <meta name="twitter:description" content={person.tagline} />
+        <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image"       content="https://hugopenacho.com/og-image.png" />
 
         {/* Favicon */}
@@ -63,10 +65,6 @@ export default function Document() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
-
-        {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
       <body>
         <Main />

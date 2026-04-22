@@ -20,7 +20,7 @@
 }
 
 .title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: clamp(1.8rem, 3.5vw, 2.2rem);
   font-weight: 600; color: var(--text-1);
   line-height: 1.15; letter-spacing: -0.025em;
@@ -114,7 +114,7 @@
   color: var(--sage); font-size: 1.4rem;
   display: flex; align-items: center; justify-content: center;
 }
-.successTitle { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 600; color: var(--text-1); }
+.successTitle { font-family: var(--font-playfair), Georgia, serif; font-size: 1.4rem; font-weight: 600; color: var(--text-1); }
 .successSub { font-size: 0.88rem; color: var(--text-2); }
 
 /* Bottom bar */

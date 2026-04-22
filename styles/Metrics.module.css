@@ -21,7 +21,7 @@
 .item:last-child { border-right: none; }
 .item.visible { opacity: 1; transform: translateY(0); }
 .value {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: clamp(2rem, 4vw, 2.6rem);
   font-weight: 600;
   color: var(--gold);

@@ -78,7 +78,7 @@
 
 /* Name */
 .name {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-size: clamp(3.2rem, 8.5vw, 6.5rem);
   font-weight: 700;
   line-height: 1.0;
@@ -129,7 +129,7 @@
   animation: fadeUp 0.9s 0.5s cubic-bezier(0.22,1,0.36,1) both;
 }
 .pullText {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   font-style: italic;
   font-size: 0.94rem;
   color: var(--text-2);
