@@ -56,6 +56,7 @@ export default function Nav() {
   }, []);
 
   return (
+    <>
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <a href="#hero" className={styles.brand}>
@@ -88,5 +89,11 @@ export default function Nav() {
         </div>
       </div>
     </nav>
+    <div
+      className={`${styles.navBackdrop} ${menuOpen ? styles.open : ''}`}
+      onClick={() => setMenuOpen(false)}
+      aria-hidden="true"
+    />
+    </>
   );
 }

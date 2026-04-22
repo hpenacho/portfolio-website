@@ -137,7 +137,31 @@
 .burgerOpen span:nth-child(2) { opacity: 0; }
 .burgerOpen span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
 
+.navBackdrop {display: none;}
+
 @media (max-width: 768px) {
+
+  .navBackdrop {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 189;
+    pointer-events: none;
+    opacity: 0;
+    background: rgba(7, 10, 24, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity 0.22s ease;
+  }
+  .navBackdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+   .nav { z-index: 200; }
+
   /* Mobile menu container */
   .links {
     position: fixed;
@@ -156,6 +180,7 @@
     margin-left: 0;
     padding: 0;       /* no inner padding, rows own their spacing */
     gap: 0;
+    z-index: 190;
   }
 
   /* Full‑width rows */
