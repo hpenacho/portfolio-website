@@ -1,5 +1,6 @@
 import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import '../styles/globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }) {
       `}</style>
       
       <Component {...pageProps} />
+      <SpeedInsights />
     </>
   );
 }
