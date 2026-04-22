@@ -4,6 +4,7 @@
 
 export const person = {
   name:           'Hugo Penacho',
+  initials:       'HP',
   role:           'Technical Consultant',
   location:       'Portugal, Europe · Remote-first',
   email:          'hpworkdev@gmail.com',

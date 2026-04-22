@@ -7,6 +7,8 @@
   --bg-surface:  #F5EDE0;
   --bg-card:     #FFFFFF;
   --bg-card-hi:  #FFF8EF;
+  --bg-nav:      #FDF8F1;
+  --bg-nav-mob:  #FDF8F1;
 
   --gold:        #B7410E;
   --gold-pale:   rgba(183, 65, 14, 0.1);
@@ -39,6 +41,8 @@
   --bg-surface:  #110F1C;
   --bg-card:     #17142A;
   --bg-card-hi:  #1D1A35;
+  --bg-nav:      #0B0914;
+  --bg-nav-mob:  #0B0914;
 
   --gold:        #F2B93B;
   --gold-pale:   rgba(242, 185, 59, 0.13);

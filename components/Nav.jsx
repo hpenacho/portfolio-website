@@ -60,7 +60,8 @@ export default function Nav() {
       <div className={styles.inner}>
         <a href="#hero" className={styles.brand}>
           <span className={styles.brandDot} />
-          {person.name}
+            <span className={styles.brandFull}>{person.name}</span>
+            <span className={styles.brandShort}>{person.initials}</span>
         </a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
