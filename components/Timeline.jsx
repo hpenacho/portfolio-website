@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useReveal } from '../hooks/useReveal';
 import styles from '../styles/Timeline.module.css';
 
@@ -7,29 +8,25 @@ function CompanyLogo({ item }) {
   const baseClass = `${styles.logo} ${item.logoInvert ? styles.logoInvert : ''}`;
 
   return (
-    <>
-      <img
-        src={item.logo}
+  <>
+    <Image
+      src={item.logo}
+      alt={`${item.company} logo`}
+      className={`${baseClass} ${item.logoDark ? styles.logoLight : ''}`.trim()}
+      width={100}
+      height={32}
+    />
+    {item.logoDark && (
+      <Image
+        src={item.logoDark}
         alt={`${item.company} logo`}
-        className={`${baseClass} ${item.logoDark ? styles.logoLight : ''}`.trim()}
+        className={`${styles.logo} ${styles.logoDark}`}
         width={100}
         height={32}
-        loading="lazy"
-        onError={(e) => e.target.style.display = 'none'}
       />
-      {item.logoDark && (
-        <img
-          src={item.logoDark}
-          alt={`${item.company} logo`}
-          className={`${styles.logo} ${styles.logoDark}`}
-          width={100}
-          height={32}
-          loading="lazy"
-          onError={(e) => e.target.style.display = 'none'}
-        />
-      )}
-    </>
-  );
+    )}
+  </>
+);
 }
 
 function TimelineItem({ item, index }) {

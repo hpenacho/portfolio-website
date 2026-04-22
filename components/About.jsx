@@ -12,7 +12,13 @@ export default function About() {
           <div className={`${styles.avatarCol} ${visible ? styles.visible : ''}`}>
             <div className={styles.avatarFrame}>
               {
-                  <Image src="/photo.jpg" alt="Hugo Penacho" fill style={{objectFit:'cover'}} />
+                <Image
+                  src="/photo.jpg"
+                  alt="Hugo Penacho"
+                  fill
+                  sizes="(max-width: 768px) 180px, 240px"
+                  style={{ objectFit: 'cover' }}
+                />              
               }
               <span className={styles.avatarInit}>HP</span>
               <p className={styles.avatarHint}>Add your photo in<br />/public/photo.jpg</p>

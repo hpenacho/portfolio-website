@@ -37,7 +37,7 @@ export default function Document() {
         <meta name="description" content={seoDescription} />
         <meta name="author" content={person.name} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://hugopenacho.com" />
+        <link rel="canonical" href="https://hugopenacho.com/" />
 
         {/* Open Graph */}
         <meta property="og:type"        content="website" />
