@@ -200,21 +200,28 @@
 /* Scroll hint */
 .scrollHint {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 3.75rem;
   left: 2.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   opacity: 0;
   animation: fadeUp 0.8s 1.4s cubic-bezier(0.22,1,0.36,1) forwards;
 }
 
 .scrollLine {
   width: 1px;
-  height: 44px;
+  height: 96px;
   background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scrollDrop 2s ease-in-out infinite;
+}
+
+.scrollLabel {
+  font-size: 0.74rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-3);
 }
 
 @keyframes scrollDrop {
@@ -222,13 +229,6 @@
   30%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
   70%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
   100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-}
-
-.scrollLabel {
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-3);
 }
 
 @media (max-width: 768px) {
