@@ -118,7 +118,7 @@ export const education = [
   },
   {
     period:  'Sep 2019 - Jan 2021',
-    role:    'IT Technologies and Programming Specialist, Computer Programming',
+    role:    'IT Technologies and Programming Specialist',
     company: 'ATEC - Training Academy',
     logo:    '/logos/atec.png',
     logoInvert: true,

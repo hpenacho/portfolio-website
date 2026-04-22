@@ -65,6 +65,7 @@ export default function Document() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
+
       </Head>
       <body>
         <Main />
