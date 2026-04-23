@@ -55,6 +55,11 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   return (
     <>
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
