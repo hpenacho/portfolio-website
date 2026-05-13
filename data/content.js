@@ -5,7 +5,7 @@
 export const person = {
   name:           'Hugo Penacho',
   initials:       'HP',
-  role:           'Technical Consultant',
+  role:           'Senior Technical Consultant',
   location:       'Portugal, Europe · Remote-first',
   email:          'hpworkdev@gmail.com',
   github:         'https://github.com/hpenacho',
@@ -13,7 +13,7 @@ export const person = {
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Open to Technical Consultant, Implementation Consultant, Support Engineer roles or similar · Remote-first preferred',
+  availableNote:  'Open to Technical Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
@@ -115,7 +115,7 @@ export const education = [
     logoInvert: true,
     location:'Remote · Finland',
     desc:    'M.E.R.N. Stack Course supported and accredited by the University of Helsinki.',
-    tags:    ['React', 'Node.js', 'Express', 'MongoDB','Redux'],
+    tags:    ['React', 'Node.js', 'Express', 'MongoDB','Redux', 'Jest'],
   },
   {
     period:  'Sep 2019 - Jan 2021',
@@ -130,12 +130,12 @@ export const education = [
 ];
 
 export const skills = [
-  { category: 'Languages',       items: ['Javascript', 'Typescript', 'Python', 'Java', 'C#', 'SQL'] },
+  { category: 'Languages',       items: ['Python', 'Javascript', 'Typescript', 'Java', 'C#', 'SQL'] },
   { category: 'Frontend',        items: ['React', 'Next.js', 'Angular', 'HTML', 'CSS'] },
-  { category: 'Backend & APIs',  items: ['Node.js', 'REST', 'SOAP'] },
-  { category: 'Data & Streaming',items: ['Microsoft SQL Server', 'MongoDB', 'Elasticsearch'] },
-  { category: 'Infrastructure',  items: ['AWS', 'Docker', 'Kubernetes', 'GitHub Actions'] },
-  { category: 'Practices',       items: ['Design Documents', 'Software Implementation'] },
+  { category: 'Backend & APIs',  items: ['REST', 'JSON', 'SOAP', 'Node.js', 'Data Manipulation', 'API Integration'] },
+  { category: 'Data & Processing',items: ['Microsoft SQL Server', 'MongoDB', 'Elasticsearch', 'pandas', 'NumPy'] },
+  { category: 'Infrastructure & Cloud',  items: ['Jenkins', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Vercel'] },
+  { category: 'Practices',       items: ['Automation', 'SaaS Implementation', 'Data Processing', 'Design Documents', 'Software Implementation', 'Troubleshooting & Logging'] },
 ];
 
 export const projects = [
