@@ -1,6 +1,8 @@
 .base    { background: var(--bg); }
 .surface { background: var(--bg-surface); }
 
+.noSub { margin-bottom: 3rem; }
+
 .timeline { position: relative; padding-left: 2.25rem; }
 
 .line {

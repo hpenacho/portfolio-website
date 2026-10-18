@@ -1,4 +1,4 @@
-import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
+import { Playfair_Display, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import '../styles/globals.css';
 
 const playfair = Playfair_Display({
@@ -15,6 +15,12 @@ const jakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+});
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -23,6 +29,7 @@ export default function App({ Component, pageProps }) {
         :root {
           --font-playfair: ${playfair.style.fontFamily};
           --font-jakarta: ${jakarta.style.fontFamily};
+          --font-mono: ${mono.style.fontFamily};
         }
       `}</style>
       

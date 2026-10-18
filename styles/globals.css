@@ -3,12 +3,12 @@
    Warm parchment — amber-gold, coral, sage
 ───────────────────────────────────────── */
 :root {
-  --bg:          #FDF8F1;
-  --bg-surface:  #F5EDE0;
+  --bg:          #FAF7F2;
+  --bg-surface:  #F2EDE4;
   --bg-card:     #FFFFFF;
   --bg-card-hi:  #FFF8EF;
-  --bg-nav:      #FDF8F1;
-  --bg-nav-mob:  #FDF8F1;
+  --bg-nav:      #FAF7F2;
+  --bg-nav-mob:  #FAF7F2;
 
   --gold:        #B7410E;
   --gold-pale:   rgba(183, 65, 14, 0.1);
@@ -20,16 +20,25 @@
   --sage:        #166B3C;
   --sage-pale:   rgba(22, 107, 60, 0.1);
 
-  --text-1:      #1C1608;
-  --text-2:      #4A3828;
-  --text-3:      #8C7A68;
+  --text-1:      #1A1714;
+  --text-2:      #4A433B;
+  --text-3:      #6B635A;
 
-  --border:      rgba(0, 0, 0, 0.09);
+  --border:      rgba(0, 0, 0, 0.10);
   --border-hi:   rgba(0, 0, 0, 0.18);
 
-  --dot-color:   rgba(0, 0, 0, 0.18);
+  --dot-color:   rgba(0, 0, 0, 0.10);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
   --shadow-lift: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
 }
 
 /* ─────────────────────────────────────────
@@ -37,16 +46,16 @@
    Warm midnight — same hues, inverted depth
 ───────────────────────────────────────── */
 [data-theme="dark"] {
-  --bg:          #0B0914;
-  --bg-surface:  #110F1C;
-  --bg-card:     #17142A;
-  --bg-card-hi:  #1D1A35;
-  --bg-nav:      #0B0914;
-  --bg-nav-mob:  #0B0914;
+  --bg:          #101012;
+  --bg-surface:  #161618;
+  --bg-card:     #202023;
+  --bg-card-hi:  #2A2A2E;
+  --bg-nav:      #101012;
+  --bg-nav-mob:  #101012;
 
-  --gold:        #F2B93B;
-  --gold-pale:   rgba(242, 185, 59, 0.13);
-  --gold-glow:   rgba(242, 185, 59, 0.25);
+  --gold:        #E8845C;
+  --gold-pale:   rgba(232, 132, 92, 0.13);
+  --gold-glow:   rgba(232, 132, 92, 0.25);
 
   --coral:       #E8674C;
   --coral-pale:  rgba(232, 103, 76, 0.13);
@@ -54,14 +63,14 @@
   --sage:        #52C98A;
   --sage-pale:   rgba(82, 201, 138, 0.13);
 
-  --text-1:      #EDE8DF;
-  --text-2:      #9994AA;
-  --text-3:      #5E5B72;
+  --text-1:      #EDEDEF;
+  --text-2:      #B8B8BD;
+  --text-3:      #8E8E95;
 
-  --border:      rgba(255, 255, 255, 0.07);
-  --border-hi:   rgba(255, 255, 255, 0.14);
+  --border:      rgba(255, 255, 255, 0.12);
+  --border-hi:   rgba(255, 255, 255, 0.22);
 
-  --dot-color:   rgba(255, 255, 255, 0.12);
+  --dot-color:   rgba(255, 255, 255, 0.07);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
   --shadow-lift: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
@@ -86,8 +95,9 @@ body {
   background: var(--bg);
   color: var(--text-1);
   font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   transition: background 0.35s ease, color 0.35s ease;
 }
 
@@ -132,11 +142,11 @@ section { padding: 6rem 0; }
 }
 
 .section-title {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 600;
   line-height: 1.15;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: var(--text-1);
   margin-bottom: 0.5rem;
 }

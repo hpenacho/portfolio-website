@@ -17,7 +17,7 @@ export const person = {
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
-At Textkernel, and now Bullhorn, I've spent four years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
+At Textkernel, and later Bullhorn after the acquisition, I spent over three years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
   heroQuote: {
     text:       'Hugo is a sharp and energetic consultant who brings structure and clarity to every task and project. He is the one to ask the right questions early, and makes sure expectations of stakeholders are aligned. [...] Beyond his technical skills, he is reliable and a great team-player.',
     author:     'Tonio Kellner',

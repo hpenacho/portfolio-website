@@ -60,7 +60,7 @@ export default function Timeline({ id, eyebrow, title, subtitle, items, surface 
     <section id={id} className={surface ? styles.surface : styles.base}>
       <div className="container">
         <span className="eyebrow">{eyebrow}</span>
-        <h2 className="section-title">{title}</h2>
+        <h2 className={`section-title ${!subtitle ? styles.noSub : ''}`.trim()}>{title}</h2>
         {subtitle && <p className="section-sub">{subtitle}</p>}
         <div className={styles.timeline}>
           <div className={styles.line} />
