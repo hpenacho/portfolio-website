@@ -9,7 +9,6 @@ export default function Skills() {
       <div className="container">
         <span className="eyebrow">Technical skills</span>
         <h2 className="section-title">Tools &amp; Technologies</h2>
-        <p className="section-sub">The stack I reach for most — and know deeply enough to debate trade-offs on.</p>
         <div className={styles.grid} ref={ref}>
           {skills.map((group, gi) => (
             <div

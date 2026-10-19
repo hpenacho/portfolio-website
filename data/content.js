@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  data/content.js  —  Edit everything here
-// ─────────────────────────────────────────────
-
 export const person = {
   name:           'Hugo Penacho',
   initials:       'HP',
@@ -15,12 +11,11 @@ export const person = {
   availableLabel: 'Available now',
   availableNote:  'Open to Technical Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
   roleLine:       'Senior Technical Consultant · Solutions Engineer',
-  valueProp:      'Technical consultant who gets complex SaaS integrations live on time, without surprises.',
-  proofLine:      '300+ rollouts for 100+ enterprise clients, including 8 Fortune 500.',
+  valueProp:      'I get complex SaaS integrations live on time, without surprises.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
-  about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
+  about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part - understanding what people need - turned out to be what I was most interested in.
 
-At Textkernel, and later Bullhorn after the acquisition, I spent over three years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous — a lot of provisioning, troubleshooting, documentation, and difficult conversations — but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
+At Textkernel, and later Bullhorn after the acquisition, I spent over three years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous - a lot of provisioning, troubleshooting, documentation, and difficult conversations - but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
   heroQuote: {
     text:       'Hugo is a sharp and energetic consultant who brings structure and clarity to every task and project. He is the one to ask the right questions early, and makes sure expectations of stakeholders are aligned. [...] Beyond his technical skills, he is reliable and a great team-player.',
     author:     'Tonio Kellner',
@@ -35,16 +30,9 @@ export const metrics = [
   { value: '30%',label: 'Faster delivery',  detail: 'Through Jenkins, internal scripts & process streamlining' },
 ];
 
-export const currently = [
-  { emoji: '📖', label: 'Reading',  value: 'Atomic Habits — James Clear' },
-  { emoji: '🛠',  label: 'Building', value: 'A lightweight observability CLI for Kubernetes clusters' },
-  { emoji: '🧠',  label: 'Learning', value: 'eBPF internals and Linux kernel tracing' },
-  { emoji: '🎯',  label: 'Seeking',  value: 'Technical Consultant, Implementation Consultant, Support Engineer roles or similar' },
-];
-
 export const experience = [
   {
-    period:  'Jun 2024 — Jan 2026',
+    period:  'Jun 2024 - Jan 2026',
     role:    'Senior Technical Consultant',
     company: 'Bullhorn',
     logo:    '/logos/bullhorn_lightmode.svg',
@@ -73,7 +61,7 @@ export const experience = [
     tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
   },
   {
-    period:  'Jun 2022 — Jan 2026',
+    period:  'Jun 2022 - Jan 2026',
     role:    'Technical Consultant',
     company: 'Textkernel',
     logo:    '/logos/Textkernel.png',
@@ -83,7 +71,7 @@ export const experience = [
     tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
   },
   {
-    period:  'Feb 2021 — May 2022',
+    period:  'Feb 2021 - May 2022',
     role:    'Web Developer',
     company: 'Siemens',
     logo:    '/logos/Siemens.svg',
@@ -203,7 +191,7 @@ export const howIWork = [
 {
     icon: '🎯',
     title: 'Focus on the "Why"',
-    desc: 'I don\'t measure success by how much code I ship, but by how much friction I actually remove. I like to dig into the goal before we start building—sometimes a quick conversation can save us weeks of building the wrong thing.',
+    desc: 'I don\'t measure success by how much code I ship, but by how much friction I actually remove. I like to dig into the goal before we start building-sometimes a quick conversation can save us weeks of building the wrong thing.',
   },
   {
     icon: '🛡️',
@@ -242,7 +230,7 @@ export const recommendations = [
     linkedinUrl: 'https://www.linkedin.com/in/hugopenacho/',
   },
   {
-    shortText: "He has this rare ability to stay calm, ask the right questions, and quickly understand what people actually need — even when they struggle to explain it themselves. [...] Hugo is the kind of colleague who makes work easier, teams stronger, and results better.",
+    shortText: "He has this rare ability to stay calm, ask the right questions, and quickly understand what people actually need - even when they struggle to explain it themselves. [...] Hugo is the kind of colleague who makes work easier, teams stronger, and results better.",
     name: 'Sheyan Sohrabi',
     role: 'Customer Success and AI Specialist, Bullhorn',
     initials: 'SS',

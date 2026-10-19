@@ -23,7 +23,7 @@ export default function Footer() {
             <h2 className={styles.title}>Let's work together</h2>
             <p className={styles.sub}>
               Whether you have a role in mind, have any business inquiries,
-              or just want to say hi — I'd love to hear from you. I typically respond within 24 hours.
+              or just want to say hi - I'd love to hear from you. I typically respond within 24 hours.
             </p>
             <div className={styles.contactLinks}>
               <a href={`mailto:${person.email}`} className={styles.contactItem}>
