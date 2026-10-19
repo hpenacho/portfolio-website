@@ -16,6 +16,7 @@ export default function About() {
                   src="/photo.jpg"
                   alt="Hugo Penacho"
                   fill
+                  loading="eager"
                   sizes="(max-width: 768px) 180px, 240px"
                   style={{ objectFit: 'cover' }}
                 />              

@@ -14,6 +14,9 @@ export const person = {
   available:      true,
   availableLabel: 'Available now',
   availableNote:  'Open to Technical Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
+  roleLine:       'Senior Technical Consultant · Solutions Engineer',
+  valueProp:      'Technical consultant who gets complex SaaS integrations live on time, without surprises.',
+  proofLine:      '300+ rollouts for 100+ enterprise clients, including 8 Fortune 500.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part — understanding what people need — turned out to be what I was most interested in.
 
