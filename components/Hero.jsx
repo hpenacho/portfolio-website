@@ -78,7 +78,7 @@ export default function Hero() {
                 priority
                 loading="eager"
                 fill
-                sizes="(max-width: 768px) 96px, 320px"
+                sizes="(max-width: 768px) 140px, 320px"
                 style={{ objectFit: 'cover' }}
               />
             </div>

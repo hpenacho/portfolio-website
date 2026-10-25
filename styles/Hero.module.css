@@ -317,7 +317,7 @@
 
   .cols {
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: clamp(104px, 33vw, 136px) 1fr;
     grid-template-areas:
       "pill  pill"
       "photo name"
@@ -363,15 +363,13 @@
   /* 2. Photo and name row */
   .photoWrap {
     grid-area: photo;
-    width: 96px;
-    height: 96px;
-    min-width: 96px;
-    max-width: 96px;
-    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    max-width: none;
+    aspect-ratio: 1 / 1;
     border-radius: 22%;
     border: 1px solid var(--border);
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     position: relative;
   }
@@ -379,11 +377,12 @@
   .name {
     grid-area: name;
     align-self: center;
-    font-size: clamp(1.75rem, 8.5vw, 2.75rem);
-    line-height: 1.05;
-    text-wrap: balance;
+    justify-self: start;
+    width: min-content;
+    font-size: clamp(1.9rem, 9.5vw, 2.9rem);
+    line-height: 1.15;
+    padding-bottom: 0.2em;
     margin: 0;
-    padding: 0;
   }
 
   /* 3. Role line */
@@ -393,23 +392,21 @@
     font-size: clamp(1rem, 4.4vw, 1.2rem);
     display: flex;
     flex-direction: column;
+    gap: 0.1rem;
     line-height: 1.35;
     margin: 1rem 0 var(--space-2) 0;
     padding: 0;
   }
 
-  .rolePrimary {
+  .rolePrimary,
+  .roleSecondary {
     color: var(--text-1);
     font-weight: 500;
+    font-size: inherit;
   }
 
   .roleSep {
     display: none;
-  }
-
-  .roleSecondary {
-    color: var(--text-2);
-    font-weight: 400;
   }
 
   /* 4. Value proposition & proof */
@@ -533,6 +530,17 @@
 
   .scrollHint {
     display: none;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+  .roleLine {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .roleSep {
+    display: inline;
+    color: var(--text-3);
   }
 }
 
