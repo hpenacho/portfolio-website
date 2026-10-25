@@ -493,6 +493,7 @@
   .metrics {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     margin-top: var(--space-4);
     padding: var(--space-3) 0;
   }
@@ -528,6 +529,13 @@
     font-size: 0.9rem;
   }
 
+  .metricDetail {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--text-3);
+    margin-top: 0.25rem;
+  }
+
   .scrollHint {
     display: none;
   }
@@ -541,17 +549,6 @@
   .roleSep {
     display: inline;
     color: var(--text-3);
-  }
-}
-
-@media (max-width: 600px) {
-  .metricDetail {
-    display: none;
-  }
-
-  .metric {
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
   }
 }
 
