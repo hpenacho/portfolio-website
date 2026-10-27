@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import { person } from '../data/content';
 
 // Standardized description for SEO and Socials
-const seoDescription = "Senior Technical Consultant. 300+ SaaS rollouts & API integrations for 100+ enterprise clients. Based in Portugal, open to remote global work or relocation.";
+const seoDescription = "Senior Technical Consultant: 300+ SaaS rollouts for 100+ enterprise clients. Remote-first, based in Europe.";
 
 const schemaOrg = {
   '@context': 'https://schema.org',
