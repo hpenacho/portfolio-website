@@ -381,6 +381,8 @@
     line-height: 1.15;
     padding-bottom: 0.2em;
     margin: 0;
+    animation: none;
+    background-size: 100%;
   }
 
   /* 3. Role line */

@@ -77,6 +77,7 @@ export default function Hero() {
                 alt={person.name}
                 priority
                 loading="eager"
+                fetchPriority="high"
                 fill
                 sizes="(max-width: 768px) 140px, 320px"
                 style={{ objectFit: 'cover' }}
