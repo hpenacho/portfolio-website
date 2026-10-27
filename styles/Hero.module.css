@@ -222,14 +222,12 @@
   overflow: hidden;
 }
 
-/* Metrics strip below columns */
 .metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: var(--space-5);
   padding: var(--space-4) 0;
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .metric {
@@ -489,12 +487,13 @@
     height: 20px;
   }
 
-  /* 7. Metrics: 2x2 grid, single hairline between rows, no vertical divider */
-  .metrics {
+ .metrics {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: var(--space-4);
-    padding: var(--space-3) 0;
+    margin-top: var(--space-3);
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
   }
 
   .metric {
@@ -502,17 +501,10 @@
     padding: var(--space-2) 0;
   }
 
-  .metric:nth-child(-n+2) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .metric:nth-last-child(-n+2) {
-    border-bottom: none;
-  }
-
   .metric:nth-child(odd) {
     padding-right: var(--space-2);
     padding-left: 0;
+    border-right: 1px solid var(--border);
   }
 
   .metric:nth-child(even) {
@@ -520,12 +512,16 @@
     padding-right: 0;
   }
 
-  .metricValue {
-    font-size: 2rem;
+  .metric:nth-child(-n+2) {
+    border-bottom: 1px solid var(--border);
   }
 
-  .metricLabel {
-    font-size: 0.9rem;
+  .metricValue { font-size: 2rem; }
+  .metricLabel { font-size: 0.9rem; }
+  .metricDetail { font-size: 0.8125rem; }
+
+  .scrollHint {
+    display: none;
   }
 
   .scrollHint {
@@ -541,17 +537,6 @@
   .roleSep {
     display: inline;
     color: var(--text-3);
-  }
-}
-
-@media (max-width: 600px) {
-  .metricDetail {
-    display: none;
-  }
-
-  .metric {
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
   }
 }
 
