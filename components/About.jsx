@@ -43,7 +43,11 @@ export default function About() {
           <div className={`${styles.textCol} ${visible ? styles.visible : ''}`}>
             <span className="eyebrow">About me</span>
             <h2 className={`section-title ${styles.title}`}>The person behind the pull requests</h2>
-            <p className={styles.bio}>{person.about}</p>
+            <div className={styles.bio}>
+              {person.about.map((paragraph, index) => (
+               <p key={index}>{paragraph}</p>
+              ))}
+            </div>
             <div className={styles.highlights}>
               <div className={styles.highlight}>
                 <span className={styles.hlIcon}>🏙</span>

@@ -3,19 +3,23 @@ export const person = {
   initials:       'HP',
   role:           'Senior Technical Consultant',
   location:       'Portugal, Europe · Remote-first',
-  email:          'hpworkdev@gmail.com',
+  email:          'workwithme@hugopenacho.com',
   github:         'https://github.com/hpenacho',
   linkedin:       'https://linkedin.com/in/hugopenacho',
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Open to Technical Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
+  availableNote:  'Technical Consultant, Agentic AI Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
   roleLine:       'Senior Technical Consultant · Solutions Engineer',
   valueProp:      'I get complex SaaS integrations live on time, without surprises.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
-  about:          `I started as a web developer at Siemens, building internal web apps / tools and talking directly to clients to figure out what they actually needed. That second part - understanding what people need - turned out to be what I was most interested in.
+  about: [
+    "I started as a web developer at Siemens, building internal tools and working directly with clients to understand what they needed. That second part turned out to be what I enjoyed most: bridging the gap between people and technology.",
 
-At Textkernel, and later Bullhorn after the acquisition, I spent over three years sitting between enterprise clients and complex technical systems, making sure the two sides understand each other. The work isn't glamorous - a lot of provisioning, troubleshooting, documentation, and difficult conversations - but I've learned that the people who show up consistently and follow through quietly are the ones teams actually rely on.`,
+    "At Textkernel, and later Bullhorn after the acquisition, I spent nearly four years working between enterprise clients and complex technical systems. I've learned that successful implementations rely as much on communication and follow-through as they do on technology.",
+
+    "Outside work, you'll find me surfing, scuba diving, practising yoga, or getting lost in a good book. I'm naturally curious and enjoy challenging myself, both in and out of work."
+  ],
   heroQuote: {
     text:       'Hugo is a sharp and energetic consultant who brings structure and clarity to every task and project. He is the one to ask the right questions early, and makes sure expectations of stakeholders are aligned. [...] Beyond his technical skills, he is reliable and a great team-player.',
     author:     'Tonio Kellner',
@@ -25,7 +29,7 @@ At Textkernel, and later Bullhorn after the acquisition, I spent over three year
 
 export const metrics = [
   { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
-  { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts tracked in Salesforce' },
+  { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },
   { value: '70%', label: 'Error Reduction', detail: 'Via validation tools & process automation' },
   { value: '30%',label: 'Faster delivery',  detail: 'Through Jenkins, internal scripts & process streamlining' },
 ];
@@ -48,7 +52,7 @@ export const experience = [
 • Considerably reduced delivery time by up to 30% for key Textkernel products through improvements in provisioning processes (Jenkins) and cross-department process streamlining.
 • Slashed user-made provisioning errors by up to 70% by implementing validation tools that enforce naming conventions and block invalid inputs. 
 • Successfully finalized over 500 JIRA issues across internal operational enhancements and key customer requests.
-• Completed over 300 customer product deliveries and functionality rollouts, tracked in Salesforce.
+• Completed over 300 customer product deliveries and functionality rollouts.
 
 𝐂𝐨𝐫𝐞 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐛𝐢𝐥𝐢𝐭𝐢𝐞𝐬
 • Created parameterized Jenkins jobs for automated, customer-tailored Textkernel product deployments.
