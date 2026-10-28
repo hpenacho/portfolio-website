@@ -4,13 +4,15 @@ import { person } from '../data/content';
 // Standardized description for SEO and Socials
 const seoDescription = "Senior Technical Consultant: 300+ SaaS rollouts for 100+ enterprise clients. Remote-first, based in Europe.";
 
+const SITE_URL = 'https://www.hugopenacho.com';
+
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: person.name,
   jobTitle: person.role,
-  url: 'https://hugopenacho.com',
-  image: 'https://hugopenacho.com/og-image.png', // Added image for Google rich snippets
+  url: SITE_URL,
+  image: (`${SITE_URL}/og-image.png`), // Added image for Google rich snippets
   email: person.email,
   sameAs: [person.github, person.linkedin],
   description: seoDescription,
@@ -37,14 +39,14 @@ export default function Document() {
         <meta name="description" content={seoDescription} />
         <meta name="author" content={person.name} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://hugopenacho.com/" />
+        <link rel="canonical" href={SITE_URL} />
 
         {/* Open Graph */}
         <meta property="og:type"        content="website" />
-        <meta property="og:url"         content="https://hugopenacho.com" />
+        <meta property="og:url"         content={SITE_URL} />
         <meta property="og:title"       content={`${person.name} — ${person.role}`} />
         <meta property="og:description" content={seoDescription}/>
-        <meta property="og:image"       content="https://hugopenacho.com/og-image.png" />
+        <meta property="og:image"       content={`${SITE_URL}/og-image.png`} />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale"      content="en_US" />
@@ -54,7 +56,7 @@ export default function Document() {
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content={`${person.name} — ${person.role}`} />
         <meta name="twitter:description" content={seoDescription} />
-        <meta name="twitter:image"       content="https://hugopenacho.com/og-image.png" />
+        <meta name="twitter:image"       content={`${SITE_URL}/og-image.png`} />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
