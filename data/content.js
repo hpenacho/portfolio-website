@@ -61,6 +61,8 @@ export const experience = [
 • Managed communication and collaboration with customers and internal resources, ensuring successful project delivery.
 • Troubleshot issues ranging from configuration errors to product issues on both ends.
 • Worked collaboratively with cross-functional teams to continuously improve products and processes.
+• Supported Pre-Sales and Customer Success teams with technical discovery, integration scoping, and requirements analysis.
+
 `,
     tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
   },
@@ -72,7 +74,7 @@ export const experience = [
     logoInvert: true,
     location:'Remote · Amsterdam, Netherlands',
     desc: `Company acquisition by Bullhorn, see above for full role details which remained largely unchanged.`,
-    tags:    ['XML', 'Python', 'Jenkins', 'API', 'SOAP', 'AI', 'AWS', 'Kibana', 'Grafana', 'Data Manipulation'],
+    tags:    [],
   },
   {
     period:  'Feb 2021 - May 2022',
@@ -80,7 +82,7 @@ export const experience = [
     company: 'Siemens',
     logo:    '/logos/Siemens.svg',
     location:'Remote · Lisbon, Portugal',
-    desc: `• Developed web applications for internal clients.
+    desc: `• Developed internal web applications and software tools to support business operations.
 • Improved maintainability of internal web apps by refactoring legacy code and resolving persistent bugs, reducing friction for future development
 • Provided corrective maintenance on company applications to ensure smooth operations.
 • Communicated directly with clients to gather feedback and helped to devise solutions that met their unique needs.
