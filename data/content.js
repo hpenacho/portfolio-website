@@ -131,7 +131,7 @@ export const skills = [
   { category: 'Frontend',        items: ['React', 'Next.js', 'Angular', 'HTML', 'CSS'] },
   { category: 'Backend & APIs',  items: ['REST', 'JSON', 'SOAP', 'Node.js', 'Data Manipulation', 'API Integration'] },
   { category: 'Data & Processing',items: ['Microsoft SQL Server', 'MongoDB', 'Elasticsearch', 'pandas', 'NumPy'] },
-  { category: 'Infrastructure & Cloud',  items: ['Jenkins', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Vercel'] },
+  { category: 'Infrastructure & Cloud',  items: ['Jenkins', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Vercel', 'CI/CD'] },
   { category: 'Practices',       items: ['Automation', 'SaaS Implementation', 'Data Processing', 'Design Documents', 'Software Implementation', 'Troubleshooting & Logging'] },
 ];
 
