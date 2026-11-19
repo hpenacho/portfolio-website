@@ -1,56 +1,37 @@
 import styles from '../styles/Certificates.module.css';
+import { credentials } from '../data/content';
 
-const credentials = [
-  {
-    title: 'Introduction to MCP',
-    issuer: 'Anthropic',
-    year: '2026',
-    description: 'Model Context Protocol concepts, architecture and tool integrations.',
-    mark: 'AI',
-    certificateUrl: '',
-  },
-  {
-    title: 'Workflow Automation',
-    issuer: 'n8n',
-    year: '2026',
-    description: 'Workflow orchestration, API integrations and AI-powered automations.',
-    mark: 'n8n',
-    certificateUrl: '',
-  },
-];
-
-const featured = {
-  title: 'AI Agents Course',
-  issuer: 'Hugging Face',
-  description: 'A practical, hands-on course covering agent architecture, tool calling, LangGraph and agent evaluation.',
-  certificateUrl: '',
-};
-
-function CertificatePreview({ issuer, title, featured: isFeatured = false, href }) {
-  const preview = (
-    <span className={`${styles.preview} ${isFeatured ? styles.previewLarge : ''}`} aria-hidden="true">
+function CertificatePreview({ item, featured = false }) {
+  const preview = item.certificateImage ? (
+    <img
+      className={styles.certificateImage}
+      src={item.certificateImage}
+      alt={`${item.title} certificate preview`}
+    />
+  ) : (
+    <span className={`${styles.preview} ${featured ? styles.previewLarge : ''}`} aria-hidden="true">
       <span className={styles.previewTop}>
-        <span className={styles.previewMark}>{issuer === 'Hugging Face' ? '🤗' : issuer === 'n8n' ? '⌘' : 'AI'}</span>
-        <span className={styles.previewIssuer}>{issuer}</span>
+        <span className={styles.previewMark}>{item.mark}</span>
+        <span className={styles.previewIssuer}>{item.issuer}</span>
       </span>
       <span className={styles.previewKicker}>CERTIFICATE</span>
-      <span className={styles.previewTitle}>{title}</span>
+      <span className={styles.previewTitle}>{item.title}</span>
       <span className={styles.previewLines}><i /><i /><i /></span>
       <span className={styles.previewSeal}>✓</span>
     </span>
   );
 
-  if (!href) {
+  if (!item.certificateUrl) {
     return <span className={styles.previewFrame}>{preview}</span>;
   }
 
   return (
     <a
       className={styles.previewFrame}
-      href={href}
+      href={item.certificateUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Open ${title} certificate`}
+      aria-label={`Open ${item.title} certificate`}
     >
       {preview}
       <span className={styles.previewOpen} aria-hidden="true">↗</span>
@@ -59,6 +40,8 @@ function CertificatePreview({ issuer, title, featured: isFeatured = false, href 
 }
 
 export default function Certificates() {
+  const { featured, additional } = credentials;
+
   return (
     <section id="certificates" className={styles.section}>
       <div className="container">
@@ -83,20 +66,15 @@ export default function Certificates() {
             )}
           </div>
           <div className={styles.featuredPreview}>
-            <CertificatePreview
-              issuer={featured.issuer}
-              title={featured.title}
-              featured
-              href={featured.certificateUrl}
-            />
+            <CertificatePreview item={featured} featured />
           </div>
         </article>
 
         <div className={styles.moreHeading}>More learning</div>
         <div className={styles.credentialList}>
-          {credentials.map(item => (
+          {additional.map(item => (
             <article className={styles.credential} key={item.title}>
-              <CertificatePreview issuer={item.issuer} title={item.title} href={item.certificateUrl} />
+              <CertificatePreview item={item} />
               <div className={styles.credentialCopy}>
                 <h3>{item.title}</h3>
                 <p className={styles.credentialMeta}>{item.issuer}<span aria-hidden="true"> · </span>{item.year}</p>
