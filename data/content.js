@@ -27,6 +27,38 @@ export const person = {
   },
 };
 
+export const credentials = {
+  featured: {
+    title: 'AI Agents Course',
+    issuer: 'Hugging Face',
+    year: '2026',
+    description: 'A practical, hands-on course covering agent architecture, tool calling, LangGraph and agent evaluation.',
+    mark: '🤗',
+    certificateImage: null,
+    certificateUrl: '',
+  },
+  additional: [
+    {
+      title: 'Introduction to MCP',
+      issuer: 'Anthropic',
+      year: '2026',
+      description: 'Model Context Protocol (MCP) concepts, architecture and tool integrations.',
+      mark: 'AI',
+      certificateImage: null,
+      certificateUrl: '',
+    },
+    {
+      title: 'Workflow Automation',
+      issuer: 'n8n',
+      year: '2026',
+      description: 'Workflow orchestration, API integrations and AI-powered automations.',
+      mark: '⌘',
+      certificateImage: null,
+      certificateUrl: '',
+    },
+  ],
+};
+
 export const metrics = [
   { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
   { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },
