@@ -42,7 +42,7 @@ function CertificatePreview({ item, featured = false }) {
 
 export default function Certificates() {
   const { featured, additional } = credentials;
-  const [revealRef, visible] = useReveal(0.08);
+  const [revealRef, visible] = useReveal();
 
   return (
     <section id="certificates" className={styles.section}>

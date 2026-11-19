@@ -241,32 +241,14 @@ a.previewFrame:hover { border-color: var(--gold); transform: translateY(-2px); }
   .credentialDescription { display: none; }
 }
 
-/* Scroll reveal — matches the 0.6s fade/slide used by Skills and My Approach. */
 .featured,
 .moreHeading,
 .credential {
   opacity: 0;
   transform: translateY(20px);
-  transition:
-    opacity 0.6s cubic-bezier(0.22,1,0.36,1),
-    transform 0.6s cubic-bezier(0.22,1,0.36,1),
-    border-color 0.2s,
-    box-shadow 0.2s;
+  transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1), border-color 0.2s, box-shadow 0.2s;
 }
 
 .featured.visible,
 .moreHeading.visible,
-.credential.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .featured,
-  .moreHeading,
-  .credential {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
+.credential.visible { opacity: 1; transform: translateY(0); }
