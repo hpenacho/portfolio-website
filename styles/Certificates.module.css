@@ -242,7 +242,6 @@ a.previewFrame:hover { border-color: var(--gold); transform: translateY(-2px); }
 }
 
 .featured,
-.moreHeading,
 .credential {
   opacity: 0;
   transform: translateY(20px);
@@ -250,5 +249,4 @@ a.previewFrame:hover { border-color: var(--gold); transform: translateY(-2px); }
 }
 
 .featured.visible,
-.moreHeading.visible,
 .credential.visible { opacity: 1; transform: translateY(0); }
