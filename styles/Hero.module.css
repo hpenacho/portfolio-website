@@ -178,7 +178,7 @@
   align-items: center;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--gold-glow);
-  border-radius: 999px;
+  border-radius: 12px;
   background: var(--gold-pale);
   color: var(--text-1);
   font-size: 0.84rem;
@@ -348,7 +348,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 5.5rem 0 2rem;
+    padding: 4.75rem 0 2rem;
     min-height: auto;
     align-items: flex-start;
   }
