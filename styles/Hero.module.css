@@ -146,6 +146,31 @@
   margin-bottom: 1.25rem;
 }
 
+/* Target roles */
+.roleTargets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.45rem;
+  max-width: 60ch;
+  margin: 0 0 1.25rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.roleTargetsLabel {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.roleTargetsText {
+  color: var(--text-3);
+}
+
 /* CTAs */
 .ctas {
   display: flex;
@@ -321,8 +346,9 @@
       "photo name"
       "role  role"
       "value value"
-      "proof proof"
-      "cta   cta";
+      "proof   proof"
+      "targets targets"
+      "cta     cta";
     column-gap: 1rem;
     row-gap: 0;
     margin: 0;
@@ -427,6 +453,24 @@
     line-height: 1.4;
     margin: 0 0 1.25rem 0;
     padding: 0;
+  }
+
+  .roleTargets {
+    grid-area: targets;
+    max-width: none;
+    margin: 0 0 1.1rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    column-gap: 0.4rem;
+  }
+
+  .roleTargetsLabel {
+    font-size: 0.65rem;
+  }
+
+  .roleTargetsText {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   /* 5. & 6. Call to Action buttons */
