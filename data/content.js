@@ -9,7 +9,7 @@ export const person = {
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Technical Consultant, Agentic AI Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
+  openToRoles:    ['Solutions Engineering', 'Technical Consulting', 'Implementation', 'AI Solutions & Automation'],
   roleLine:       'Senior Technical Consultant · Solutions Engineer',
   valueProp:      'I get complex SaaS integrations live on time, without surprises.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
