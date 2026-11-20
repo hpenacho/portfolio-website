@@ -76,6 +76,22 @@ export default function Nav() {
     let frameId = 0;
 
     const updateActiveSection = () => {
+      const documentHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+      const maxScrollY = Math.max(0, documentHeight - window.innerHeight);
+      const isAtPageBottom = window.scrollY >= maxScrollY - 16;
+
+      // The footer is the final destination and often cannot scroll up to
+      // the same activation line as the taller content sections.
+      if (isAtPageBottom) {
+        setActiveSection(previous => (
+          previous === 'contact' ? previous : 'contact'
+        ));
+        return;
+      }
+
       const markerY = window.scrollY + 96;
       let currentSection = '';
 
@@ -149,6 +165,7 @@ export default function Nav() {
             href={sectionHref('contact')}
             className={`${styles.hireBtn} ${activeSection === 'contact' ? styles.activeHireBtn : ''}`}
             aria-current={activeSection === 'contact' ? 'location' : undefined}
+            onClick={() => setActiveSection('contact')}
           >
             Contact
           </a>
