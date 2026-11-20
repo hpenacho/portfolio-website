@@ -87,7 +87,7 @@ export default function Nav() {
         <div className={styles.right}>
           <ThemeToggle />
           <a href={person.cvUrl} download className={styles.cvBtn}>Download CV</a>
-          <a href={sectionHref('contact')} className={styles.hireBtn}>Hire me</a>
+          <a href={sectionHref('contact')} className={styles.hireBtn}>Contact</a>
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             onClick={() => setMenuOpen(v => !v)}
