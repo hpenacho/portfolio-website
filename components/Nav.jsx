@@ -52,12 +52,35 @@ export default function Nav() {
   const sectionHref = id => homePath ? `#${id}` : `/#${id}`;
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', fn, { passive: true });
     return () => window.removeEventListener('scroll', fn);
   }, []);
+
+  useEffect(() => {
+    if (!homePath || typeof IntersectionObserver === 'undefined') return;
+
+    const sections = links
+      .map(link => document.getElementById(link.href.slice(1)))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      const current = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+
+      if (current) setActiveSection(current.target.id);
+    }, {
+      rootMargin: '-80px 0px -65% 0px',
+      threshold: 0,
+    });
+
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
+  }, [homePath]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -77,7 +100,15 @@ export default function Nav() {
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
           {links.map(l => (
             <li key={l.href}>
-              <a href={sectionHref(l.href.slice(1))} className={styles.link} onClick={() => setMenuOpen(false)}>
+              <a
+                href={sectionHref(l.href.slice(1))}
+                className={`${styles.link} ${activeSection === l.href.slice(1) ? styles.activeLink : ''}`}
+                aria-current={activeSection === l.href.slice(1) ? 'location' : undefined}
+                onClick={() => {
+                  setActiveSection(l.href.slice(1));
+                  setMenuOpen(false);
+                }}
+              >
                 {l.label}
               </a>
             </li>
