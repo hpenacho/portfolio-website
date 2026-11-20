@@ -47,9 +47,13 @@ export default function Hero() {
             <p className={styles.proofLine}>{person.proofLine}</p>
 
             {openToRoles.length > 0 && (
-              <div className={styles.roleTargets} aria-label="Open to opportunities in">
-                <span className={styles.roleTargetsLabel}>Open to</span>
-                <span className={styles.roleTargetsText}>{openToRoles.join(' · ')}</span>
+              <div className={styles.roleTargets}>
+                <p className={styles.roleTargetsLabel}>Open to opportunities in</p>
+                <ul className={styles.roleTargetsList} aria-label="Target roles">
+                  {openToRoles.map(role => (
+                    <li key={role} className={styles.roleTarget}>{role}</li>
+                  ))}
+                </ul>
               </div>
             )}
 
