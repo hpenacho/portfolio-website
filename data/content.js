@@ -11,7 +11,7 @@ export const person = {
   availableLabel: 'Available now',
   openToRoles:    ['Solutions Engineering', 'Technical Consulting', 'Implementation', 'AI Solutions & Automation'],
   roleLine:       'Senior Technical Consultant · Solutions Engineer',
-  valueProp:      'I get complex SaaS integrations live on time, without surprises.',
+  valueProp:      'I turn complex technical requirements into reliable solutions, integrations and intelligent automations.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about: [
     "I work at the intersection of enterprise technology, customer needs and implementation. I started in software development at Siemens, building internal applications, before moving into technical consultancy at Textkernel (later acquired by Bullhorn), where I delivered SaaS implementations and integrations for enterprise customers.",
