@@ -49,7 +49,7 @@ export default function Recommendations() {
     <section id="recommendations" className={styles.section}>
       <div className="container">
         <span className="eyebrow">Social proof</span>
-        <h2 className="section-title">What colleagues say</h2>
+        <h2 className="section-title">Trusted by the people I've worked with.</h2>
         <p className="section-sub">
           Recommendations from LinkedIn - from people I&apos;ve been lucky to work with.
         </p>

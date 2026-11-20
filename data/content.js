@@ -14,9 +14,9 @@ export const person = {
   valueProp:      'I get complex SaaS integrations live on time, without surprises.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about: [
-    "I started as a web developer at Siemens, building internal tools and working directly with clients to understand what they needed. That second part turned out to be what I enjoyed most: bridging the gap between people and technology.",
+    "I work at the intersection of enterprise technology, customer needs and implementation. I started in software development at Siemens, building internal applications, before moving into technical consultancy at Textkernel (later acquired by Bullhorn), where I delivered SaaS implementations and integrations for enterprise customers.",
 
-    "At Textkernel, and later Bullhorn after the acquisition, I spent nearly four years working between enterprise clients and complex technical systems. I've learned that successful implementations rely as much on communication and follow-through as they do on technology.",
+    "I'm particularly interested in simplifying complex processes through automation. I'm now building on my enterprise experience with hands-on work in AI agents, LLM integrations and intelligent workflow automation.",
 
     "Outside work, you'll find me surfing, scuba diving, practising yoga, or getting lost in a good book. I'm naturally curious and enjoy challenging myself, both in and out of work."
   ],
