@@ -66,8 +66,11 @@ export default function Nav() {
       return;
     }
 
-    const sections = links
-      .map(link => document.getElementById(link.href.slice(1)))
+    const sections = [
+      ...links.map(link => link.href.slice(1)),
+      'contact',
+    ]
+      .map(id => document.getElementById(id))
       .filter(Boolean);
 
     let frameId = 0;
@@ -142,7 +145,13 @@ export default function Nav() {
         <div className={styles.right}>
           <ThemeToggle />
           <a href={person.cvUrl} download className={styles.cvBtn}>Download CV</a>
-          <a href={sectionHref('contact')} className={styles.hireBtn}>Contact</a>
+          <a
+            href={sectionHref('contact')}
+            className={`${styles.hireBtn} ${activeSection === 'contact' ? styles.activeHireBtn : ''}`}
+            aria-current={activeSection === 'contact' ? 'location' : undefined}
+          >
+            Contact
+          </a>
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             onClick={() => setMenuOpen(v => !v)}
