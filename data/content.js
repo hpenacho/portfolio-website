@@ -27,6 +27,38 @@ export const person = {
   },
 };
 
+export const credentials = [
+  {
+    title: 'n8n Quickstart',
+    issuer: 'n8n',
+    year: '2026',
+    category: 'Workflow automation',
+    description: 'A practical course in workflow orchestration, API integrations and AI-powered automations.',
+    mark: '⌘',
+    certificateImage: '/certificateThumbnails/n8n-quickstart.webp',
+    certificateUrl: 'https://learn.n8n.io/certificates/1d1ecb33606d4941999728ef86f09ecd',
+  },
+    {
+    title: 'AI Agents Course',
+    issuer: 'Hugging Face',
+    year: '2026',
+    category: 'AI agents',
+    description: 'Hands-on training in agent architecture, tool calling, LangGraph and agent evaluation.',
+    mark: '🤗',
+    certificateImage: '/certificateThumbnails/hugging-face-agents.webp',
+    certificateUrl: 'https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/spearhead-flow/2026-10-06.png',
+  },
+  {
+    title: 'Introduction to MCP',
+    issuer: 'Claude Academy by Anthropic',
+    year: '2026',
+    category: 'AI integrations',
+    description: 'Model Context Protocol concepts, architecture and tool integrations.',
+    mark: 'AI',
+    certificateImage: '/certificateThumbnails/claude-mcp.webp',
+    certificateUrl: 'https://academy.claude.com/badges/60f60fc6-7d93-4ac4-a181-bb17bdbfbd38',
+  },
+];
 export const metrics = [
   { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
   { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },

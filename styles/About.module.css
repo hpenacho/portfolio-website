@@ -1,5 +1,4 @@
-.section { background: var(--bg-surface); }
-
+.section { background: var(--bg); }
 .grid {
   display: grid;
   grid-template-columns: 240px 1fr;

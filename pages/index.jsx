@@ -6,6 +6,7 @@ import About from '../components/About';
 import Timeline from '../components/Timeline';
 import Skills from '../components/Skills';
 import HowIWork from '../components/HowIWork';
+import Certificates from '../components/Certificates';
 import Recommendations from '../components/Recommendations';
 import Footer from '../components/Footer';
 import { person, experience, education } from '../data/content';
@@ -34,12 +35,12 @@ export default function Home() {
           eyebrow="Background"
           title="Academic History"
           subtitle="                                 "
-       /* subtitle="Where the foundations were built." */
           items={education}
           surface={false}
         />
         <HowIWork />
         <Skills />
+        <Certificates limit={5} />
         <About />
         {/* <Currently /> */}
         {/* <Projects /> */}

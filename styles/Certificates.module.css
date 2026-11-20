@@ -1,0 +1,151 @@
+.section {
+  padding: 4.25rem 0;
+  background: var(--bg-surface);
+}
+
+.archiveSection { padding-top: 7rem; }
+
+.sectionHeading { margin-bottom: 1.35rem; }
+.heading {
+  margin: 0 0 0.35rem;
+  color: var(--text-1);
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.55rem, 2.5vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.intro {
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  max-width: 560px;
+}
+
+.credentialList { display: grid; gap: 0.55rem; }
+.credential {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-card);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1), border-color 0.2s, box-shadow 0.2s;
+}
+.credential.visible { opacity: 1; transform: translateY(0); }
+.credential:hover { border-color: var(--border-hi); box-shadow: var(--shadow-card); }
+
+.previewFrame {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 116px;
+  aspect-ratio: 1.68;
+  padding: 0.3rem;
+  border: 1px solid var(--border-hi);
+  border-radius: 7px;
+  background: var(--bg);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+a.previewFrame:hover { border-color: var(--gold); transform: translateY(-2px); }
+.certificateImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+}
+.previewFallback {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 1px dashed var(--border-hi);
+  border-radius: 4px;
+  color: var(--text-3);
+  font-size: 0.55rem;
+}
+.previewMark { color: var(--gold); font-size: 0.95rem; font-weight: 700; }
+.previewOpen {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--gold);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-card);
+}
+
+.credentialCopy { min-width: 0; }
+.credentialCopy h3 {
+  overflow: hidden;
+  color: var(--text-1);
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+}
+.credentialMeta { margin-top: 0.12rem; color: var(--text-2); font-size: 0.75rem; }
+.credentialDescription { margin-top: 0.15rem; color: var(--text-2); font-size: 0.75rem; line-height: 1.45; }
+
+.iconLink, .pendingIcon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-left: 1px solid var(--border-hi);
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+.iconLink:hover { color: var(--coral); }
+.pendingIcon { color: var(--text-3); }
+
+.viewAllWrap { display: flex; justify-content: flex-end; margin-top: 0.9rem; }
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 1px solid var(--border-hi);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: color 0.2s, border-color 0.2s;
+}
+.viewAllLink:hover { color: var(--coral); border-color: var(--gold); }
+.viewAllLink:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+
+@media (max-width: 700px) {
+  .section { padding: 3rem 0; }
+  .archiveSection { padding-top: 6rem; }
+  .sectionHeading { margin-bottom: 1.1rem; }
+  .credential { grid-template-columns: 82px minmax(0, 1fr) 26px; gap: 0.65rem; padding: 0.55rem; }
+  .previewFrame { max-width: 82px; }
+  .credentialCopy h3 { font-size: 0.88rem; }
+  .credentialMeta, .credentialDescription { font-size: 0.68rem; }
+  .iconLink, .pendingIcon { width: 25px; height: 25px; font-size: 1rem; }
+  .viewAllWrap { margin-top: 0.75rem; }
+}
+
+@media (max-width: 390px) {
+  .credential { grid-template-columns: 68px minmax(0, 1fr) 22px; gap: 0.5rem; }
+  .previewFrame { max-width: 68px; }
+  .credentialDescription { display: none; }
+}
