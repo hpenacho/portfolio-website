@@ -61,27 +61,52 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    if (!homePath || typeof IntersectionObserver === 'undefined') return;
+    if (!homePath) {
+      setActiveSection('');
+      return;
+    }
 
     const sections = links
       .map(link => document.getElementById(link.href.slice(1)))
       .filter(Boolean);
 
-    const observer = new IntersectionObserver(() => {
-      const markerY = window.innerHeight * 0.3;
-      const current = sections.find(section => {
-        const rect = section.getBoundingClientRect();
-        return rect.top <= markerY && rect.bottom > markerY;
+    let frameId = 0;
+
+    const updateActiveSection = () => {
+      const markerY = window.scrollY + 96;
+      let currentSection = '';
+
+      for (const section of sections) {
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        if (sectionTop <= markerY) {
+          currentSection = section.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSection(previous => (
+        previous === currentSection ? previous : currentSection
+      ));
+    };
+
+    const scheduleUpdate = () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        updateActiveSection();
       });
+    };
 
-      setActiveSection(current?.id || '');
-    }, {
-      rootMargin: '-80px 0px -65% 0px',
-      threshold: 0,
-    });
+    updateActiveSection();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
 
-    sections.forEach(section => observer.observe(section));
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      if (frameId) window.cancelAnimationFrame(frameId);
+    };
   }, [homePath]);
 
   useEffect(() => {
@@ -106,10 +131,7 @@ export default function Nav() {
                 href={sectionHref(l.href.slice(1))}
                 className={`${styles.link} ${activeSection === l.href.slice(1) ? styles.activeLink : ''}`}
                 aria-current={activeSection === l.href.slice(1) ? 'location' : undefined}
-                onClick={() => {
-                  setActiveSection(l.href.slice(1));
-                  setMenuOpen(false);
-                }}
+                onClick={() => setMenuOpen(false)}
               >
                 {l.label}
               </a>
