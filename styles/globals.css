@@ -5,6 +5,7 @@
 :root {
   --bg:          #FAF7F2;
   --bg-surface:  #F2EDE4;
+  --bg-cta:      #E8DFD3;
   --bg-card:     #FFFFFF;
   --bg-card-hi:  #FFF8EF;
   --bg-nav:      #FAF7F2;
@@ -48,6 +49,7 @@
 [data-theme="dark"] {
   --bg:          #101012;
   --bg-surface:  #161618;
+  --bg-cta:      #242428;
   --bg-card:     #202023;
   --bg-card-hi:  #2A2A2E;
   --bg-nav:      #101012;
