@@ -27,38 +27,38 @@ export const person = {
   },
 };
 
-export const credentials = {
-  featured: {
+export const credentials = [
+  {
     title: 'AI Agents Course',
     issuer: 'Hugging Face',
     year: '2026',
-    description: 'A practical, hands-on course covering agent architecture, tool calling, LangGraph and agent evaluation.',
+    category: 'AI agents',
+    description: 'Hands-on training in agent architecture, tool calling, LangGraph and agent evaluation.',
     mark: '🤗',
     certificateImage: '/certificateThumbnails/hugging-face-agents.webp',
-    certificateUrl: 'https://us.aws.cdn.hf.co/xet-bridge-us/6800ea554845e4edbca48825/a43fc941352573d51636bff4f031c72a56d94406255f966718946bb033e5cae8?response-content-type=image%2Fpng&user_id=6ac28d66f96f1c216529e719&X-Xet-Cas-Uid=6ac28d66f96f1c216529e719&response-content-disposition=inline%3B+filename*%3DUTF-8%27%272026-11-10.png%3B+filename%3D%222026-11-10.png%22%3B&xip=5biPRwYoneU&Expires=1795130714&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjgwMGVhNTU0ODQ1ZTRlZGJjYTQ4ODI1L2E0M2ZjOTQxMzUyNTczZDUxNjM2YmZmNGYwMzFjNzJhNTZkOTQ0MDYyNTVmOTY2NzE4OTQ2YmIwMzNlNWNhZThcXD9yZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcmdXNlcl9pZD02YWMyOGQ2NmY5NmYxYzIxNjUyOWU3MTkmWC1YZXQtQ2FzLVVpZD02YWMyOGQ2NmY5NmYxYzIxNjUyOWU3MTkmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyNzIwMjYtMTEtMTAucG5nJTNCK2ZpbGVuYW1lJTNEJTIyMjAyNi0xMS0xMC5wbmclMjIlM0ImeGlwPTViaVBSd1lvbmVVIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFcG9jaFRpbWUiOjE3OTUxMzA3MTR9fX1dfQ__&Signature=MEQCIF1h5dage5ImpWLsLcR3z-dtHl2OXzjJWkgZvLDuXh9lAiAWJODHFEL4Qoyn-nlxz6hKmq1G7DtCVHebUFZsQjWZHg__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256',
+    certificateUrl: 'https://us.aws.cdn.hf.co/xet-bridge-us/6800ea554845e4edbca48825/a43fc941352573d51636bff4f031c72a56d94406255f966718946bb033e5cae8?response-content-type=image%2Fpng&user_id=6ac28d66f96f1c216529e719&X-Xet-Cas-Uid=6ac28d66f96f1c216529e719&response-content-disposition=inline%3B+filename*%3DUTF-8%27%272026-11-10.png%3B+filename%3D%222026-11-10.png%22%3B&xip=5biPRwYoneU&Expires=1795130714&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjgwMGVhNTU0ODQ1ZTRlZGJjYTQ4ODI1L2E0M2ZjOTQxMzUyNTczZDUxNjM2YmZmNGYwMzFjNzJhNTZkOTQ0MDYyNTVmOTY2NzE4OTQ2YmIwMzNlNWNhZThcXD9yZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcmdXNlcl9pZD02YWMyOGQ2NmY5NmYxYzIxNjUyOWU3MTkmWC1YZXQtQ2FzLVVpZD02YWMyOGQ2NmY5NmYxYzIxNjUyOWU3MTkmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbi1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyNzIwMjYtMTEtMTAucG5nJTNCK2ZpbGVuYW1lJTNEJTIyMjAyNi0xMS0xMC5wbmclMjIlM0ImeGlwPTViaVBSd1lvbmVVIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFcG9jaFRpbWUiOjE3OTUxMzA3MTR9fX1dfQ__&Signature=MEQCIF1h5dage5ImpWLsLcR3z-dtHl2OXzjJWkgZvLDuXh9lAiAWJODHFEL4Qoyn-nlxz6hKmq1G7DtCVHebUFZsQjWZHg__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256',
   },
-  additional: [
-    {
-      title: 'Introduction to MCP',
-      issuer: 'Claude Academy by Anthropic',
-      year: '2026',
-      description: 'Model Context Protocol (MCP) concepts, architecture and tool integrations.',
-      mark: 'AI',
-      certificateImage: '/certificateThumbnails/claude-mcp.webp',
-      certificateUrl: 'https://academy.claude.com/badges/60f60fc6-7d93-4ac4-a181-bb17bdbfbd38',
-    },
-    {
-      title: 'n8n Quickstart',
-      issuer: 'n8n',
-      year: '2026',
-      description: 'A practical course in workflow orchestration, API integrations and AI-powered automations.',
-      mark: '⌘',
-      certificateImage: '/certificateThumbnails/n8n-quickstart.webp',
-      certificateUrl: 'https://learn.n8n.io/certificates/1d1ecb33606d4941999728ef86f09ecd',
-    },
-  ],
-};
-
+  {
+    title: 'Introduction to MCP',
+    issuer: 'Claude Academy by Anthropic',
+    year: '2026',
+    category: 'AI integrations',
+    description: 'Model Context Protocol concepts, architecture and tool integrations.',
+    mark: 'AI',
+    certificateImage: '/certificateThumbnails/claude-mcp.webp',
+    certificateUrl: 'https://academy.claude.com/badges/60f60fc6-7d93-4ac4-a181-bb17bdbfbd38',
+  },
+  {
+    title: 'n8n Quickstart',
+    issuer: 'n8n',
+    year: '2026',
+    category: 'Workflow automation',
+    description: 'A practical course in workflow orchestration, API integrations and AI-powered automations.',
+    mark: '⌘',
+    certificateImage: '/certificateThumbnails/n8n-quickstart.webp',
+    certificateUrl: 'https://learn.n8n.io/certificates/1d1ecb33606d4941999728ef86f09ecd',
+  },
+];
 export const metrics = [
   { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
   { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { person } from '../data/content';
 import styles from '../styles/Nav.module.css';
 
@@ -46,6 +47,9 @@ function ThemeToggle() {
 }
 
 export default function Nav() {
+  const router = useRouter();
+  const homePath = router.pathname === '/';
+  const sectionHref = id => homePath ? `#${id}` : `/#${id}`;
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
 
@@ -64,7 +68,7 @@ export default function Nav() {
     <>
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <a href="#hero" className={styles.brand}>
+        <a href={sectionHref("hero")} className={styles.brand}>
           <span className={styles.brandDot} />
             <span className={styles.brandFull}>{person.name}</span>
             <span className={styles.brandShort}>{person.initials}</span>
@@ -73,7 +77,7 @@ export default function Nav() {
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href} className={styles.link} onClick={() => setMenuOpen(false)}>
+              <a href={sectionHref(l.href.slice(1))} className={styles.link} onClick={() => setMenuOpen(false)}>
                 {l.label}
               </a>
             </li>
@@ -83,7 +87,7 @@ export default function Nav() {
         <div className={styles.right}>
           <ThemeToggle />
           <a href={person.cvUrl} download className={styles.cvBtn}>Download CV</a>
-          <a href={'#contact'} className={styles.hireBtn}>Hire me</a>
+          <a href={sectionHref('contact')} className={styles.hireBtn}>Hire me</a>
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             onClick={() => setMenuOpen(v => !v)}

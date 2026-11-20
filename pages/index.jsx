@@ -40,7 +40,7 @@ export default function Home() {
         />
         <HowIWork />
         <Skills />
-        <Certificates />
+        <Certificates limit={5} />
         <About />
         {/* <Currently /> */}
         {/* <Projects /> */}

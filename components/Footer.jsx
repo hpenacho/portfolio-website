@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { person } from '../data/content';
 import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
+  const router = useRouter();
+  const backToTopHref = router.pathname === '/' ? '#hero' : '/#hero';
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [sent, setSent] = useState(false);
 
@@ -80,7 +83,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p className={styles.copy}>© {new Date().getFullYear()} {person.name} · Built with Next.js</p>
           <p className={styles.copy}>This site uses cookieless, privacy-friendly analytics. No personal data is collected.</p>
-          <a href="#hero" className={styles.topLink}>Back to top ↑</a>
+          <a href={backToTopHref} className={styles.topLink}>Back to top ↑</a>
         </div>
       </div>
     </footer>
