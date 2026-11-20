@@ -595,7 +595,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .metricValue { font-size: 2rem; }
+  .metricValue { font-size: clamp(1.5rem, 7.5vw, 2rem); }
   .metricLabel { font-size: 0.9rem; }
   .metricDetail { font-size: 0.8125rem; }
 
