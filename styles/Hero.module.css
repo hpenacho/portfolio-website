@@ -446,11 +446,16 @@
     padding: 0;
   }
 
-  .rolePrimary,
-  .roleSecondary {
+  .rolePrimary {
     color: var(--text-1);
-    font-weight: 500;
+    font-weight: 600;
     font-size: inherit;
+  }
+
+  .roleSecondary {
+    color: var(--text-2);
+    font-weight: 400;
+    font-size: 0.94em;
   }
 
   .roleSep {
