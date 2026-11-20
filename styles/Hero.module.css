@@ -108,8 +108,12 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Role line */
+/* Role hierarchy */
 .roleLine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.06rem;
   font-size: clamp(1.25rem, 2.2vw, 1.6rem);
   font-weight: 500;
   color: var(--text-1);
@@ -119,14 +123,13 @@
 
 .rolePrimary {
   color: var(--text-1);
-}
-
-.roleSep {
-  color: var(--text-3);
+  font-weight: 600;
 }
 
 .roleSecondary {
-  color: var(--text-1);
+  color: var(--text-2);
+  font-size: 0.94em;
+  font-weight: 400;
 }
 
 /* Value proposition */
@@ -244,6 +247,10 @@
   background: var(--gold-pale);
   transform: translateY(-2px);
 }
+.btnIcon:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 
 /* Right column: photo */
 .right {
@@ -297,12 +304,12 @@
 .metricLabel {
   font-size: 0.84rem;
   color: var(--text-1);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .metricDetail {
-  font-size: 0.73rem;
-  color: var(--text-3);
+  font-size: 0.75rem;
+  color: var(--text-2);
   line-height: 1.4;
 }
 
@@ -598,17 +605,6 @@
 
   .scrollHint {
     display: none;
-  }
-}
-
-@media (min-width: 560px) and (max-width: 768px) {
-  .roleLine {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .roleSep {
-    display: inline;
-    color: var(--text-3);
   }
 }
 
