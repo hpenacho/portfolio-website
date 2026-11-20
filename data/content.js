@@ -56,7 +56,7 @@ export const credentials = [
     description: 'Model Context Protocol concepts, architecture and tool integrations.',
     mark: 'AI',
     certificateImage: '/certificateThumbnails/claude-mcp.webp',
-    certificateUrl: 'https://academy.claude.com/badges/60f60fc6-7d93-4ac4-a181-bb17bdbfbd38',
+    certificateUrl: 'https://academy.claude.com/verify/817f84da5cf62281330a56af997fe225',
   },
 ];
 export const metrics = [
