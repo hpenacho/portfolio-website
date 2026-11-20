@@ -67,12 +67,14 @@ export default function Nav() {
       .map(link => document.getElementById(link.href.slice(1)))
       .filter(Boolean);
 
-    const observer = new IntersectionObserver((entries) => {
-      const current = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    const observer = new IntersectionObserver(() => {
+      const markerY = window.innerHeight * 0.3;
+      const current = sections.find(section => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= markerY && rect.bottom > markerY;
+      });
 
-      if (current) setActiveSection(current.target.id);
+      setActiveSection(current?.id || '');
     }, {
       rootMargin: '-80px 0px -65% 0px',
       threshold: 0,
