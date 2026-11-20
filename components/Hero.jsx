@@ -7,6 +7,7 @@ export default function Hero() {
   const roles = person.roleLine
     ? person.roleLine.split('·').map(r => r.trim()).filter(Boolean)
     : [];
+  const openToRoles = person.openToRoles || [];
 
   return (
     <section id="hero" className={styles.hero}>
@@ -44,6 +45,13 @@ export default function Hero() {
 
             <p className={styles.valueProp}>{person.valueProp}</p>
             <p className={styles.proofLine}>{person.proofLine}</p>
+
+            {openToRoles.length > 0 && (
+              <div className={styles.roleTargets} aria-label="Open to opportunities in">
+                <span className={styles.roleTargetsLabel}>Open to</span>
+                <span className={styles.roleTargetsText}>{openToRoles.join(' · ')}</span>
+              </div>
+            )}
 
             <div className={styles.ctas}>
               <a href="#contact" className={styles.btnPrimary}>
