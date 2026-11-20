@@ -60,10 +60,10 @@ export const credentials = [
   },
 ];
 export const metrics = [
-  { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
-  { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },
-  { value: '70%', label: 'Error Reduction', detail: 'Via validation tools & process automation' },
-  { value: '30%',label: 'Faster delivery',  detail: 'Through Jenkins, internal scripts & process streamlining' },
+  { value: '100+',      label: 'Enterprise Clients',       detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
+  { value: '300+',      label: 'Customer Deliveries',      detail: 'AI-powered product rollouts and functionality updates' },
+  { value: 'Up to 70%', label: 'Fewer Provisioning Errors', detail: 'Through validation tools and process automation' },
+  { value: 'Up to 30%', label: 'Faster Delivery',           detail: 'Through Jenkins automation and process improvements' },
 ];
 
 export const experience = [
