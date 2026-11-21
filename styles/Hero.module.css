@@ -302,9 +302,29 @@
 }
 
 .metricLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
   font-size: 0.84rem;
   color: var(--text-1);
   font-weight: 600;
+  line-height: 1.35;
+}
+
+.metricIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  margin-top: 0.02rem;
+  color: var(--gold);
+}
+.metricIcon svg {
+  display: block;
+  width: 17px;
+  height: 17px;
 }
 
 .metricDetail {
