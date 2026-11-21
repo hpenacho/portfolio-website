@@ -4,8 +4,8 @@ import styles from '../styles/Hero.module.css';
 
 function MetricIcon({ name }) {
   const iconProps = {
-    width: 17,
-    height: 17,
+    width: '100%',
+    height: '100%',
     viewBox: '0 0 24 24',
     fill: 'none',
     stroke: 'currentColor',
@@ -147,14 +147,14 @@ export default function Hero() {
         <div className={styles.metrics}>
           {metrics.map(m => (
             <div key={m.label} className={styles.metric}>
-              <span className={styles.metricValue}>{m.value}</span>
-              <span className={styles.metricLabel}>
-                <span className={styles.metricIcon}>
-                  <MetricIcon name={m.icon} />
-                </span>
-                <span>{m.label}</span>
+              <span className={styles.metricWatermark} aria-hidden="true">
+                <MetricIcon name={m.icon} />
               </span>
-              {m.detail && <span className={styles.metricDetail}>{m.detail}</span>}
+              <div className={styles.metricContent}>
+                <span className={styles.metricValue}>{m.value}</span>
+                <span className={styles.metricLabel}>{m.label}</span>
+                {m.detail && <span className={styles.metricDetail}>{m.detail}</span>}
+              </div>
             </div>
           ))}
         </div>

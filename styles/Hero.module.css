@@ -278,9 +278,9 @@
 }
 
 .metric {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+  position: relative;
+  isolation: isolate;
+  display: block;
   padding: 0 var(--space-2);
   border-right: 1px solid var(--border);
 }
@@ -294,6 +294,34 @@
   padding-right: 0;
 }
 
+.metricContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.metricWatermark {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.35rem;
+  z-index: 0;
+  display: block;
+  width: 76px;
+  height: 76px;
+  color: var(--gold);
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+}
+
+.metricWatermark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .metricValue {
   font-size: 2rem;
   font-weight: 600;
@@ -302,29 +330,10 @@
 }
 
 .metricLabel {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
   font-size: 0.84rem;
   color: var(--text-1);
   font-weight: 600;
   line-height: 1.35;
-}
-
-.metricIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 20px;
-  width: 20px;
-  height: 20px;
-  margin-top: 0.02rem;
-  color: var(--gold);
-}
-.metricIcon svg {
-  display: block;
-  width: 20px;
-  height: 20px;
 }
 
 .metricDetail {
@@ -603,6 +612,14 @@
   .metric {
     border: none;
     padding: var(--space-2) 0;
+  }
+
+  .metricWatermark {
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 50px;
+    height: 50px;
+    opacity: 0.07;
   }
 
   .metric:nth-child(odd) {
