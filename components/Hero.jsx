@@ -147,11 +147,13 @@ export default function Hero() {
         <div className={styles.metrics}>
           {metrics.map(m => (
             <div key={m.label} className={styles.metric}>
-              <span className={styles.metricWatermark} aria-hidden="true">
-                <MetricIcon name={m.icon} />
-              </span>
               <div className={styles.metricContent}>
-                <span className={styles.metricValue}>{m.value}</span>
+                <div className={styles.metricTop}>
+                  <span className={styles.metricValue}>{m.value}</span>
+                  <span className={styles.metricIcon} aria-hidden="true">
+                    <MetricIcon name={m.icon} />
+                  </span>
+                </div>
                 <span className={styles.metricLabel}>{m.label}</span>
                 {m.detail && <span className={styles.metricDetail}>{m.detail}</span>}
               </div>
