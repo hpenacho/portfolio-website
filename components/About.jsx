@@ -11,16 +11,14 @@ export default function About() {
         <div className={styles.grid} ref={ref}>
           <div className={`${styles.avatarCol} ${visible ? styles.visible : ''}`}>
             <div className={styles.avatarFrame}>
-              {
-                <Image
-                  src="/photo.jpg"
-                  alt="Hugo Penacho"
-                  fill
-                  loading="eager"
-                  sizes="(max-width: 768px) 180px, 240px"
-                  style={{ objectFit: 'cover' }}
-                />              
-              }
+              <Image
+                src="/photo.jpg"
+                alt="Hugo Penacho"
+                fill
+                loading="eager"
+                sizes="(max-width: 768px) 180px, 240px"
+                style={{ objectFit: 'cover' }}
+              />
               <span className={styles.avatarInit}>HP</span>
               <p className={styles.avatarHint}>Add your photo in<br />/public/photo.jpg</p>
             </div>
@@ -45,33 +43,8 @@ export default function About() {
             <h2 className={`section-title ${styles.title}`}>The person behind the solutions.</h2>
             <div className={styles.bio}>
               {person.about.map((paragraph, index) => (
-               <p key={index}>{paragraph}</p>
+                <p key={index}>{paragraph}</p>
               ))}
-            </div>
-            <div className={styles.highlights}>
-              <div className={styles.highlight}>
-                <span className={styles.hlIcon}>🏙</span>
-                <div>
-                  <p className={styles.hlLabel}>Based in</p>
-                  <p className={styles.hlValue}>{person.location}</p>
-                </div>
-              </div>
-              <div className={styles.highlight}>
-                <span className={styles.hlIcon}>💼</span>
-                <div>
-                  <p className={styles.hlLabel}>Looking for</p>
-                  <p className={styles.hlValue}>{person.availableNote}</p>
-                </div>
-              </div>
-              <div className={styles.highlight}>
-                <span className={styles.hlIcon}>✉️</span>
-                <div>
-                  <p className={styles.hlLabel}>Best way to reach me</p>
-                  <p className={styles.hlValue}>
-                    <a href={`mailto:${person.email}`} className={styles.emailLink}>{person.email}</a>
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

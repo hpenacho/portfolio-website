@@ -9,9 +9,9 @@ export const person = {
   cvUrl:          '/hugo-penacho-cv.pdf',
   available:      true,
   availableLabel: 'Available now',
-  availableNote:  'Technical Consultant, Agentic AI Consultant, Implementation Consultant, Solutions Engineer roles or similar · Remote-first preferred',
+  openToRoles:    ['Solutions Engineering', 'Technical Consulting', 'Implementation', 'AI Solutions & Automation'],
   roleLine:       'Senior Technical Consultant · Solutions Engineer',
-  valueProp:      'I get complex SaaS integrations live on time, without surprises.',
+  valueProp:      'I turn complex technical requirements into reliable solutions, integrations and intelligent automations.',
   tagline:        `Protecting your deadline by asking the hard questions two weeks early`,
   about: [
     "I work at the intersection of enterprise technology, customer needs and implementation. I started in software development at Siemens, building internal applications, before moving into technical consultancy at Textkernel (later acquired by Bullhorn), where I delivered SaaS implementations and integrations for enterprise customers.",
@@ -60,10 +60,10 @@ export const credentials = [
   },
 ];
 export const metrics = [
-  { value: '100+',  label: 'Enterprise Clients', detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
-  { value: '300+',  label: 'Product Rollouts',    detail: 'AI-powered product rollouts' },
-  { value: '70%', label: 'Error Reduction', detail: 'Via validation tools & process automation' },
-  { value: '30%',label: 'Faster delivery',  detail: 'Through Jenkins, internal scripts & process streamlining' },
+  { value: '100+',      label: 'Enterprise Clients',       detail: 'Including 8 Fortune 500 companies and 5 government agencies' },
+  { value: '300+',      label: 'Customer Deliveries',      detail: 'AI-powered product rollouts and functionality updates' },
+  { value: 'Up to 70%', label: 'Fewer Provisioning Errors', detail: 'Through validation tools and process automation' },
+  { value: 'Up to 30%', label: 'Faster Delivery',           detail: 'Through Jenkins automation and process improvements' },
 ];
 
 export const experience = [

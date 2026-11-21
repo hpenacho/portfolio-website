@@ -52,12 +52,81 @@ export default function Nav() {
   const sectionHref = id => homePath ? `#${id}` : `/#${id}`;
   const [scrolled, setScrolled]   = useState(false);
   const [menuOpen, setMenuOpen]   = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', fn, { passive: true });
     return () => window.removeEventListener('scroll', fn);
   }, []);
+
+  useEffect(() => {
+    if (!homePath) {
+      setActiveSection('');
+      return;
+    }
+
+    const sections = [
+      ...links.map(link => link.href.slice(1)),
+      'contact',
+    ]
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    let frameId = 0;
+
+    const updateActiveSection = () => {
+      const documentHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+      const maxScrollY = Math.max(0, documentHeight - window.innerHeight);
+      const isAtPageBottom = window.scrollY >= maxScrollY - 16;
+
+      // The footer is the final destination and often cannot scroll up to
+      // the same activation line as the taller content sections.
+      if (isAtPageBottom) {
+        setActiveSection(previous => (
+          previous === 'contact' ? previous : 'contact'
+        ));
+        return;
+      }
+
+      const markerY = window.scrollY + 96;
+      let currentSection = '';
+
+      for (const section of sections) {
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        if (sectionTop <= markerY) {
+          currentSection = section.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSection(previous => (
+        previous === currentSection ? previous : currentSection
+      ));
+    };
+
+    const scheduleUpdate = () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        updateActiveSection();
+      });
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      if (frameId) window.cancelAnimationFrame(frameId);
+    };
+  }, [homePath]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -77,7 +146,12 @@ export default function Nav() {
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
           {links.map(l => (
             <li key={l.href}>
-              <a href={sectionHref(l.href.slice(1))} className={styles.link} onClick={() => setMenuOpen(false)}>
+              <a
+                href={sectionHref(l.href.slice(1))}
+                className={`${styles.link} ${activeSection === l.href.slice(1) ? styles.activeLink : ''}`}
+                aria-current={activeSection === l.href.slice(1) ? 'location' : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
                 {l.label}
               </a>
             </li>
@@ -87,7 +161,14 @@ export default function Nav() {
         <div className={styles.right}>
           <ThemeToggle />
           <a href={person.cvUrl} download className={styles.cvBtn}>Download CV</a>
-          <a href={sectionHref('contact')} className={styles.hireBtn}>Hire me</a>
+          <a
+            href={sectionHref('contact')}
+            className={`${styles.hireBtn} ${activeSection === 'contact' ? styles.activeHireBtn : ''}`}
+            aria-current={activeSection === 'contact' ? 'location' : undefined}
+            onClick={() => setActiveSection('contact')}
+          >
+            Contact
+          </a>
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             onClick={() => setMenuOpen(v => !v)}

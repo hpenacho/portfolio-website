@@ -56,14 +56,30 @@
 }
 
 .link {
-  font-size: 0.82rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--text-2);
-  padding: 0.35rem 0.7rem;
+  padding: 0.4rem 0.7rem;
   border-radius: 100px;
   transition: color 0.2s, background 0.2s;
 }
 .link:hover { color: var(--text-1); background: var(--gold-pale); }
+.link.activeLink {
+  color: var(--gold);
+  background: var(--gold-pale);
+  box-shadow: inset 0 0 0 1px var(--gold-glow);
+  font-weight: 600;
+}
+.link:focus-visible,
+.cvBtn:focus-visible,
+.themeBtn:focus-visible,
+.burger:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 
 .right {
   display: flex;
@@ -106,16 +122,35 @@
 .cvBtn:hover { color: var(--text-1); border-color: var(--border-hi); }
 
 .hireBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #fff;
-  background: var(--gold);
-  padding: 0.38rem 1.1rem;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold-glow);
+  padding: 0.34rem 1.05rem;
   border-radius: 100px;
-  transition: all 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
   white-space: nowrap;
 }
-.hireBtn:hover { opacity: 0.88; transform: translateY(-1px); }
+.hireBtn:hover {
+  color: var(--gold);
+  background: var(--gold-pale);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+.hireBtn.activeHireBtn {
+  color: var(--gold);
+  background: var(--gold-pale);
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 1px var(--gold-glow);
+}
+.hireBtn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 
 .burger {
   display: none;
@@ -207,6 +242,13 @@
     background: transparent;
   }
 
+  .link.activeLink {
+    color: var(--gold);
+    background: var(--gold-pale);
+    box-shadow: inset 3px 0 0 var(--gold);
+    font-weight: 600;
+  }
+
   .link::after {
     content: "›";
     font-size: 1.1rem;
@@ -224,8 +266,8 @@
     color: var(--gold);
   }
 
-  .link:hover {
-    /* optional: keep hover neutral on touch devices */
+  .link:hover:not(.activeLink) {
+    /* Keep hover neutral on touch devices without overriding the active section. */
     color: var(--text-1);
     background: transparent;
   }
