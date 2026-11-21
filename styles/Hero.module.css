@@ -304,12 +304,12 @@
 
 .metricWatermark {
   position: absolute;
-  top: 0;
+  top: -0.55rem;
   right: 0.1rem;
   z-index: 0;
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
   color: var(--gold);
   opacity: 0.14;
   pointer-events: none;
@@ -615,10 +615,10 @@
   }
 
   .metricWatermark {
-    top: 0.05rem;
+    top: -0.25rem;
     right: 0.05rem;
-    width: 46px;
-    height: 46px;
+    width: 36px;
+    height: 36px;
     opacity: 0.11;
   }
 
@@ -647,6 +647,14 @@
 
   .scrollHint {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .metricWatermark {
+    width: 28px;
+    height: 28px;
+    opacity: 0.09;
   }
 }
 
