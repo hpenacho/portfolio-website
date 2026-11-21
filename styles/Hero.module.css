@@ -33,7 +33,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 /* Two-column layout */
@@ -309,11 +309,11 @@
 
 .metricIcon {
   display: inline-flex;
-  flex: 0 0 38px;
+  flex: 0 0 42px;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   color: var(--gold);
   opacity: 0.24;
   pointer-events: none;
@@ -417,9 +417,9 @@
   }
 
   .metricIcon {
-    flex-basis: 34px;
-    width: 34px;
-    height: 34px;
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
   }
 
   .metricValue {
@@ -660,9 +660,9 @@
   }
 
   .metricIcon {
-    flex-basis: 30px;
-    width: 30px;
-    height: 30px;
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
     opacity: 0.22;
   }
 
@@ -696,9 +696,9 @@
 
 @media (max-width: 420px) {
   .metricIcon {
-    flex-basis: 24px;
-    width: 24px;
-    height: 24px;
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
     opacity: 0.2;
   }
 
