@@ -6,7 +6,7 @@ export default function Skills() {
   const [ref, visible] = useReveal();
   return (
     <section id="skills" className={styles.section}>
-      <div className="container">
+      <div className="container-1040">
         <span className="eyebrow">Technical skills</span>
         <h2 className="section-title">Tools &amp; Technologies</h2>
         <div className={styles.grid} ref={ref}>

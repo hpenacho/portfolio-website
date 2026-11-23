@@ -149,7 +149,10 @@ export default function Hero() {
             <div key={m.label} className={styles.metric}>
               <div className={styles.metricContent}>
                 <div className={styles.metricTop}>
-                  <span className={styles.metricValue}>{m.value}</span>
+                  <span className={styles.metricValue}>
+                    {m.qualifier && <span className={styles.metricQualifier}>{m.qualifier}</span>}
+                    <span>{m.value}</span>
+                  </span>
                   <span className={styles.metricIcon} aria-hidden="true">
                     <MetricIcon name={m.icon} />
                   </span>

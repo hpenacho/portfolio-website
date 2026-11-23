@@ -47,7 +47,7 @@ function RecCard({ rec, index }) {
 export default function Recommendations() {
   return (
     <section id="recommendations" className={styles.section}>
-      <div className="container">
+      <div className="container-1000">
         <span className="eyebrow">Social proof</span>
         <h2 className="section-title">Trusted by the people I've worked with.</h2>
         <p className="section-sub">

@@ -6,7 +6,7 @@ export default function HowIWork() {
   const [ref, visible] = useReveal();
   return (
     <section id="how-i-work" className={styles.section}>
-      <div className="container">
+      <div className="container-1040">
         <span className="eyebrow">Working style</span>
         <h2 className="section-title">My Approach</h2>
         <p className="section-sub">What to expect when working with me and how I solve project headaches</p>

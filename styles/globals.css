@@ -126,6 +126,16 @@ button { font-family: inherit; }
   padding: 0 2rem;
 }
 
+.container-1040,
+.container-1000 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-1040 { max-width: 1040px; }
+.container-1000 { max-width: 1000px; }
+
 section { padding: 6rem 0; }
 
 /* ─────────────────────────────────────────
@@ -201,5 +211,5 @@ section { padding: 6rem 0; }
 ───────────────────────────────────────── */
 @media (max-width: 768px) {
   section { padding: 4rem 0; }
-  .container, .container-wide { padding: 0 1.25rem; }
+  .container, .container-wide, .container-1040, .container-1000 { padding: 0 1.25rem; }
 }
