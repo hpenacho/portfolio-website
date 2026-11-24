@@ -45,7 +45,7 @@ function CredentialRow({ item, onPreview }) {
     certificatePreview = (
       <button
         type="button"
-        className={styles.previewFrame + ' certificatePreviewButton'}
+        className={styles.previewFrame + ' ' + styles.previewButton}
         onClick={() => onPreview(item)}
         aria-label={'View ' + item.title + ' certificate'}
         aria-haspopup="dialog"
@@ -105,30 +105,30 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
 
   return (
     <div
-      className="certificateViewerBackdrop"
+      className={styles.viewerBackdrop}
       role="presentation"
       onClick={event => {
         if (event.target === event.currentTarget) onClose();
       }}
     >
       <section
-        className="certificateViewerDialog"
+        className={styles.viewerDialog}
         role="dialog"
         aria-modal="true"
         aria-labelledby="certificate-viewer-title"
       >
-        <header className="certificateViewerHeader">
-          <div className="certificateViewerHeading">
-            <span className="certificateViewerEyebrow">Certificate</span>
+        <header className={styles.viewerHeader}>
+          <div className={styles.viewerHeading}>
+            <span className={styles.viewerEyebrow}>Certificate</span>
             <h2 id="certificate-viewer-title">{item.title}</h2>
             <p>{item.issuer} · {item.year}</p>
           </div>
 
-          <div className="certificateViewerActions">
+          <div className={styles.viewerActions}>
             {!fileIsPdf && (
               <button
                 type="button"
-                className="certificateViewerAction"
+                className={styles.viewerAction}
                 onClick={onToggleZoom}
                 aria-pressed={imageZoomed}
               >
@@ -137,7 +137,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
             )}
             {item.sourceUrl && (
               <a
-                className="certificateViewerAction"
+                className={styles.viewerAction}
                 href={item.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +147,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
             )}
             {verificationUrl && (
               <a
-                className="certificateViewerAction"
+                className={styles.viewerAction}
                 href={verificationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,7 +156,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
               </a>
             )}
             <a
-              className="certificateViewerAction"
+              className={styles.viewerAction}
               href={item.certificateFile}
               target="_blank"
               rel="noopener noreferrer"
@@ -164,7 +164,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
               Open original ↗
             </a>
             <a
-              className="certificateViewerAction certificateViewerDownload"
+              className={styles.viewerAction + ' ' + styles.viewerDownload}
               href={item.certificateFile}
               download
             >
@@ -173,7 +173,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
             <button
               ref={closeButtonRef}
               type="button"
-              className="certificateViewerClose"
+              className={styles.viewerClose}
               onClick={onClose}
               aria-label="Close certificate viewer"
             >
@@ -182,16 +182,16 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
           </div>
         </header>
 
-        <div className={'certificateViewerStage' + (imageZoomed && !fileIsPdf ? ' certificateViewerStageZoomed' : '')}>
+        <div className={styles.viewerStage + (imageZoomed && !fileIsPdf ? ' ' + styles.viewerStageZoomed : '')}>
           {fileIsPdf ? (
             <iframe
-              className="certificateViewerPdf"
+              className={styles.viewerPdf}
               src={item.certificateFile}
               title={item.title + ' certificate PDF'}
             />
           ) : (
             <img
-              className={'certificateViewerImage' + (imageZoomed ? ' certificateViewerImageZoomed' : '')}
+              className={styles.viewerImage + (imageZoomed ? ' ' + styles.viewerImageZoomed : '')}
               src={item.certificateFile}
               alt={item.title + ' certificate'}
               draggable="false"
@@ -199,7 +199,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
           )}
         </div>
         {!fileIsPdf && (
-          <p className="certificateViewerHint">
+          <p className={styles.viewerHint}>
             {imageZoomed
               ? 'Scroll to inspect the full-size image. Select “Fit to screen” to return.'
               : 'Select “View full size” to inspect fine print and certificate details.'}
@@ -207,225 +207,7 @@ function CertificateViewer({ item, onClose, closeButtonRef, imageZoomed, onToggl
         )}
       </section>
 
-      <style jsx>{`
-        .certificateViewerBackdrop {
-          position: fixed;
-          z-index: 1200;
-          inset: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 1.25rem;
-          background: rgba(8, 8, 10, 0.86);
-          backdrop-filter: blur(6px);
-        }
 
-        .certificateViewerDialog {
-          display: flex;
-          flex-direction: column;
-          width: min(1120px, 100%);
-          height: min(900px, calc(100dvh - 2.5rem));
-          overflow: hidden;
-          border: 1px solid var(--border-hi);
-          border-radius: 16px;
-          background: var(--bg-card);
-          color: var(--text-1);
-          box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
-        }
-
-        .certificateViewerHeader {
-          display: flex;
-          flex: 0 0 auto;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1rem;
-          padding: 0.9rem 1.15rem;
-          border-bottom: 1px solid var(--border);
-        }
-
-        .certificateViewerHeading { min-width: 0; }
-        .certificateViewerEyebrow {
-          display: block;
-          margin-bottom: 0.12rem;
-          color: var(--gold);
-          font-size: 0.62rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-        }
-
-        .certificateViewerHeading h2 {
-          overflow: hidden;
-          color: var(--text-1);
-          font-family: var(--font-playfair), Georgia, serif;
-          font-size: 1.15rem;
-          font-weight: 600;
-          line-height: 1.25;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        .certificateViewerHeading p {
-          margin-top: 0.12rem;
-          color: var(--text-2);
-          font-size: 0.72rem;
-        }
-
-        .certificateViewerActions {
-          display: flex;
-          flex: 0 0 auto;
-          align-items: center;
-          justify-content: flex-end;
-          gap: 0.4rem;
-          flex-wrap: wrap;
-        }
-
-        .certificateViewerAction,
-        .certificateViewerClose {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 34px;
-          padding: 0.42rem 0.62rem;
-          border: 1px solid var(--border-hi);
-          border-radius: 7px;
-          background: var(--bg-surface);
-          color: var(--text-2);
-          font-family: inherit;
-          font-size: 0.7rem;
-          font-weight: 600;
-          line-height: 1.2;
-          text-decoration: none;
-          white-space: nowrap;
-          cursor: pointer;
-          transition: border-color 0.2s, color 0.2s, background 0.2s;
-        }
-
-        .certificateViewerAction:hover,
-        .certificateViewerClose:hover {
-          border-color: var(--gold);
-          color: var(--gold);
-        }
-
-        .certificateViewerClose {
-          width: 34px;
-          padding: 0;
-          font-size: 1.35rem;
-          font-weight: 400;
-        }
-
-        .certificateViewerStage {
-          display: flex;
-          flex: 1 1 auto;
-          align-items: center;
-          justify-content: center;
-          min-height: 0;
-          overflow: auto;
-          padding: 1rem;
-          background: #171719;
-        }
-
-        .certificateViewerStageZoomed {
-          align-items: flex-start;
-          justify-content: flex-start;
-        }
-
-        .certificateViewerImage {
-          display: block;
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-          user-select: none;
-        }
-
-        .certificateViewerImageZoomed {
-          max-width: none;
-          max-height: none;
-          margin: 0 auto;
-        }
-
-        .certificateViewerPdf {
-          display: block;
-          width: 100%;
-          height: 100%;
-          min-height: 0;
-          border: 0;
-          background: #fff;
-        }
-
-        .certificateViewerHint {
-          flex: 0 0 auto;
-          padding: 0.45rem 0.75rem;
-          color: var(--text-3);
-          font-size: 0.66rem;
-          text-align: center;
-        }
-
-        .certificatePreviewButton {
-          appearance: none;
-          color: inherit;
-          font: inherit;
-          text-align: left;
-          cursor: zoom-in;
-        }
-
-        .certificatePreviewButton:focus-visible,
-        .certificateViewerAction:focus-visible,
-        .certificateViewerClose:focus-visible {
-          outline: 2px solid var(--gold);
-          outline-offset: 3px;
-        }
-
-        @media (max-width: 700px) {
-          .certificateViewerBackdrop {
-            padding: 0;
-          }
-
-          .certificateViewerDialog {
-            width: 100%;
-            height: 100dvh;
-            border: 0;
-            border-radius: 0;
-          }
-
-          .certificateViewerHeader {
-            align-items: flex-start;
-            flex-direction: column;
-            gap: 0.6rem;
-            padding: 0.75rem 0.8rem;
-          }
-
-          .certificateViewerHeading h2 { font-size: 1rem; }
-
-          .certificateViewerActions {
-            width: 100%;
-            justify-content: flex-start;
-            gap: 0.35rem;
-          }
-
-          .certificateViewerAction,
-          .certificateViewerClose {
-            min-height: 32px;
-            padding: 0.38rem 0.5rem;
-            font-size: 0.66rem;
-          }
-
-          .certificateViewerClose {
-            margin-left: auto;
-            width: 32px;
-            padding: 0;
-          }
-
-          .certificateViewerStage { padding: 0.5rem; }
-        }
-
-        @media (max-width: 380px) {
-          .certificateViewerDownload { display: none; }
-          .certificateViewerAction { font-size: 0.62rem; }
-        }
-      `}</style>
     </div>
   );
 }
