@@ -2,6 +2,56 @@ import Image from 'next/image';
 import { person, metrics } from '../data/content';
 import styles from '../styles/Hero.module.css';
 
+function MetricIcon({ name }) {
+  const iconProps = {
+    width: '100%',
+    height: '100%',
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.7,
+    strokeLinecap: 'round',
+    strokeLinejoin: 'round',
+    'aria-hidden': true,
+  };
+
+  switch (name) {
+    case 'building':
+      return (
+        <svg {...iconProps}>
+          <path d="M3 21h18" />
+          <path d="M5 21V6l7-3v18" />
+          <path d="M12 9h7v12" />
+          <path d="M8 8h1M8 12h1M8 16h1M15 12h1M15 16h1" />
+        </svg>
+      );
+    case 'package':
+      return (
+        <svg {...iconProps}>
+          <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" />
+          <path d="m4.3 7.7 7.7 4.4 7.7-4.4M12 12.1V21" />
+          <path d="m8 5.3 8 4.5" />
+        </svg>
+      );
+    case 'shield-check':
+      return (
+        <svg {...iconProps}>
+          <path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-3Z" />
+          <path d="m8.5 12 2.2 2.2 4.8-4.8" />
+        </svg>
+      );
+    case 'timer':
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="13" r="8" />
+          <path d="M12 9v4l2.5 1.5M9 2h6M12 5V2M19 6l1.5-1.5" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function Hero() {
   const roles = person.roleLine
     ? person.roleLine.split('·').map(r => r.trim()).filter(Boolean)
@@ -97,9 +147,19 @@ export default function Hero() {
         <div className={styles.metrics}>
           {metrics.map(m => (
             <div key={m.label} className={styles.metric}>
-              <span className={styles.metricValue}>{m.value}</span>
-              <span className={styles.metricLabel}>{m.label}</span>
-              {m.detail && <span className={styles.metricDetail}>{m.detail}</span>}
+              <div className={styles.metricContent}>
+                <div className={styles.metricTop}>
+                  <span className={styles.metricValue}>
+                    {m.qualifier && <span className={styles.metricQualifier}>{m.qualifier}</span>}
+                    <span>{m.value}</span>
+                  </span>
+                  <span className={styles.metricIcon} aria-hidden="true">
+                    <MetricIcon name={m.icon} />
+                  </span>
+                </div>
+                <span className={styles.metricLabel}>{m.label}</span>
+                {m.detail && <span className={styles.metricDetail}>{m.detail}</span>}
+              </div>
             </div>
           ))}
         </div>

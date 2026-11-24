@@ -7,7 +7,7 @@ export default function About() {
   const [ref, visible] = useReveal();
   return (
     <section id="about" className={styles.section}>
-      <div className="container">
+      <div className="container-1000">
         <div className={styles.grid} ref={ref}>
           <div className={`${styles.avatarCol} ${visible ? styles.visible : ''}`}>
             <div className={styles.avatarFrame}>
